@@ -28,7 +28,8 @@ html
 }
 body
 {
-	min-height: 100vh;
+	position: fixed;
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -150,6 +151,7 @@ body
 .container .bottombar .sociallinks:hover
 {
 	border: 2px solid #fff;
+	transition: 0s;
 }
 .container .bottombar .sociallinks .icon
 {
