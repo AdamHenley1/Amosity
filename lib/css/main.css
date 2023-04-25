@@ -210,6 +210,7 @@ body
 {
 	border-radius: 100vmax;
 	overflow: hidden;
+	background-color: aqua;
 }
 .progress .progress-bar
 {
