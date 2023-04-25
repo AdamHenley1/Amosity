@@ -206,6 +206,10 @@ body
 	border-radius: 2px;
 	margin: 0px 7px 0px 0px;
 }
+.banner-bg
+{
+	display: none;
+}
 .progress
 {
 	border-radius: 100vmax;
