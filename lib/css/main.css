@@ -229,7 +229,7 @@ body
 .progress /* this is the size and colour of the progbar */
 {
 	position: relative;
-	width: 100%;
+	width: 100px;
 	height: 5px;
 	border-radius: 100vmax;
 	overflow: hidden;
