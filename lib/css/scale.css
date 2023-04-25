@@ -1,6 +1,7 @@
 @media (orientation: portrait) {
-    .container
+    .middlepoint
     {
+        align-items: unset;
         
     }
 }
