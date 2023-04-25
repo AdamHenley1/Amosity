@@ -222,11 +222,11 @@ body
 	height: 100%;
 	background-color: #9287e4;
 }
-.slideshowcontainer .banner-bg .banner-button
+.slideshowcontainer .banner-bg .banner-button/* this is the button inside each banner ( used to go to the page shown )*/
 {
 	height: fit-content;
 }
-.progress
+.progress /* this is the size and colour of the progbar */
 {
 	position: relative;
 	width: 100%;
@@ -235,7 +235,7 @@ body
 	overflow: hidden;
 	background-color: aqua;
 }
-.progress .progress-bar
+.progress .progress-bar/* DONT CHANGE ANYTHING HERE EXCEPT THE COLOUR */
 {
 	position: absolute;
 	top: 0;
