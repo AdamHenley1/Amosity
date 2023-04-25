@@ -1,1 +1,221 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+}
+:root 
+{
+	--themecol: #2a1f8c;
+	--accentcol: #2a1f8c90;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: #fff;
+    border-radius: 10px;
+}
+::-webkit-scrollbar
+{
+    display: block;
+    width: 0px;
+    background-color: var(--accentcol);
+}
+html
+{
+	background-color: #000;
+}
+body
+{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--accentcol);
+	overflow: hidden;
+}
+#particles-js,#screen
+{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+}
+.middlepoint
+{
+	position: fixed;
+	box-sizing: initial;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	border-radius: 20px;
+	overflow: hidden;
+	border: 4px solid var(--themecol);
+	background-image: linear-gradient(to bottom, var(--themecol), transparent, transparent);
+}
+.container
+{
+	position: relative;
+	width: 40%;
+	height: auto;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px #00000080;
+	backdrop-filter: blur(2px);
+	animation: fadein 1s;
+}
+.container .topbar
+{
+	position: relative;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	border-radius: 20px 20px 0px 0px;
+	border-left: 1px solid var(--themecol);
+	border-right: 1px solid var(--themecol);
+	border-top: 1px solid var(--themecol);
+	background-size: cover;
+}
+.container .topbar img
+{
+	position: relative;
+	z-index: 2;
+	margin-top: 5px;
+	height: 180px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	background-color: var(--accentcol);
+}
+.container .middlebar
+{
+	position: relative;
+	height: 80px;
+	border-left: 1px solid var(--themecol);
+	border-right: 1px solid var(--themecol);
+	background-color: var(--accentcol);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.container .middlebar p,.container .middlebar span ion-icon
+{
+	color: #fff;
+	font-size: 1.5em;
+}
+.container .middlebar span
+{
+	margin-left: 5px;
+	margin-bottom: 2.5px;
+	width: 1.5em;
+	height: 1.9em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .bottombar
+{
+	position: relative;
+	height: auto;
+	padding: 25px 0px;
+	border-left: 1px solid var(--themecol);
+	border-right: 1px solid var(--themecol);
+	background-color: var(--accentcol);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: scroll;
+}
+.container .bottombar .sociallinks
+{
+	height: 35px;
+	width: 90%;
+	margin: 10px 0px;
+	border-radius: 50px;
+	background-color: var(--accentcol);
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-size: 1.5em;
+	text-decoration: none;
+	border: 2px solid var(--accentcol);
+	animation: socialfadein calc(0.3s * var(--i));;
+	transition: 0.15s;
+}
+.container .bottombar .sociallinks:hover
+{
+	border: 2px solid #fff;
+}
+.container .bottombar .sociallinks .icon
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+.container .bottombar .sociallinks .text
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .credits
+{
+	position: relative;
+	border-left: 2px solid var(--themecol);
+	border-right: 2px solid var(--themecol);
+	border-bottom: 2px solid var(--themecol);
+	border-radius: 0px 0px 20px 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	background-color: var(--themecol);
+}
+.footer
+{
+	position: relative;
+	padding: 5px;
+	font-size: 1em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	text-decoration: none;
+}
+.footer img
+{
+	height: 1em;
+	border-radius: 2px;
+	margin: 0px 7px 0px 0px;
+}
+noscript
+{
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	background-color: var(--accentcol);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+noscript h1
+{
+	font-size: 4em;
+	margin: 20px;
+}
+noscript p
+{
+	font-size: 3em;
+	margin: 0px 20px;
+}

@@ -1,9 +1,106 @@
-<!DOCTYPE HTML><html lang="en">
-  <head>
-    <Title>Amosity's website</Title>
-    <link rel="stylesheet" type="text/css" href="lib/css/main.css"/>
-  </head>
-  <body>
-    <p>helllooooo</p>
-  </body>
+<!doctype html>
+<html lang="en-US">
+    <head>
+		<title>NATSKI</title>
+        <meta charset="UTF-8" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="ground up website for fun" />
+        <meta name="keywords" content="portfolio, natspooky, natski" />
+        <meta name="author" content="NATSKI"/>
+        <meta name="copyright" content="NATSKI">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://natski.netlify.com/icon/favicon/16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://natski.netlify.com/icon/favicon/32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="https://natski.netlify.com/icon/favicon/96.png" />
+        <link rel="icon" type="image/png" sizes="128x128" href="https://natski.netlify.com/icon/favicon/128.png" />
+        <link rel="icon" type="image/png" sizes="196x196" href="https://natski.netlify.com/icon/favicon/196.png" />
+        <link rel="apple-touch-icon"sizes="57x57" href="https://natski.netlify.com/icon/mobile/57.png" />
+        <link rel="apple-touch-icon"sizes="60x60" href="https://natski.netlify.com/icon/mobile/60.png" />
+        <link rel="apple-touch-icon"sizes="72x72" href="https://natski.netlify.com/icon/mobile/72.png" />
+        <link rel="apple-touch-icon"sizes="76x76" href="https://natski.netlify.com/icon/mobile/76.png" />
+        <link rel="apple-touch-icon"sizes="114x114" href="https://natski.netlify.com/icon/mobile/114.png" />
+        <link rel="apple-touch-icon"sizes="120x120" href="https://natski.netlify.com/icon/mobile/120.png" />
+        <link rel="apple-touch-icon"sizes="144x144" href="https://natski.netlify.com/icon/mobile/144.png" />
+        <link rel="apple-touch-icon"sizes="152x152" href="https://natski.netlify.com/icon/mobile/152.png" />
+        <meta property="og:description" content="ground up website for fun" />
+        <meta property="og:image" content="https://natski.netlify.com/icon/avatar/400.png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400" />
+        <meta property="og:url" content="https://natskisocial.netlify.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="NATSKI" />
+        <meta name="twitter:title" content="NATSKI">
+        <meta name="twitter:description" content="ground up website for fun">
+        <meta name="twitter:image" content="https://natski.netlify.com/icon/avatar/1200.png">
+        <meta name="twitter:site" content="@natspooky_">
+        <meta name="twitter:creator" content="@natspooky_">
+        <meta name="twitter:card" content="summary_large_image">
+        <link rel="stylesheet" type="text/css" href="lib/css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="https://natski.netlify.com/lib/css/socialsites/animations.css"/>
+        <link rel="stylesheet" type="text/css" href="https://natski.netlify.com/lib/css/socialsites/scale.css"/>
+        <script src="https://natski.netlify.com/lib/js/particles.js"></script>
+        <script src="https://natski.netlify.com/lib/js/jquery.js"></script>
+	</head>
+    <body onload="load()">
+        <div id="particles-js"></div>
+        <div id="screen"></div>
+        <div class="middlepoint">
+            <div class="container">
+                <div class="topbar" style="background-image: url('icon/img/1.jpg');">
+                    <img src="https://natski.netlify.com/icon/avatar/300.png" alt="">
+                </div>
+                <div class="middlebar">
+                    <p>NATSKI</p>
+                    <span>
+                        <ion-icon name="heart-circle"></ion-icon>
+                    </span>
+                </div>
+                <div class="bottombar">
+                    <a class="sociallinks" style="--i: 2;" href="https://steamcommunity.com/id/natski_/">
+                        <span class="icon">
+                            <ion-icon name="logo-steam"></ion-icon>
+                        </span>
+                        <span class="text">
+                            steam
+                        </span>
+                    </a>
+                    <a class="sociallinks" style="--i: 3;" href="https://twitter.com/natspooky_">
+                        <span class="icon">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </span>
+                        <span class="text">
+                            twitter
+                        </span>
+                    </a>
+                    <a class="sociallinks" style="--i: 4;" href="https://instagram.com/natspooky_">
+                        <span class="icon">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </span>
+                        <span class="text">
+                            instagram
+                        </span>
+                    </a>
+                </div>
+                <div class="credits">
+                    <a class="footer" href="https://natski.netlify.com/details.html#">
+                        <img src="https://natski.netlify.com/icon/img/Nicon.png" alt="">
+                        <p>©2022 NATSKI</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <noscript>
+            <h1>javascript is disabled :(</h1>
+            <p>this website requires javascript to run.<br>please enable the use of javascript to see this page :)</p>
+        </noscript>
+        <script src="https://natski.netlify.com/lib/js/socialsites/main.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            function load(){
+                $(document).ready(function(){
+                    $('.middlepoint').css('display','flex');
+                });
+            };
+        </script>
+    </body>
 </html>
