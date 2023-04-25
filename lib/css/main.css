@@ -54,13 +54,14 @@ body
 	right: 10px;
 	bottom: 10px;
 	border-radius: 20px;
-	overflow: hidden;
+	overflow: scroll;
 	border: 4px solid var(--themecol);
 	background-image: linear-gradient(to bottom, var(--themecol), transparent, transparent);
 }
 .container
 {
 	position: relative;
+	margin: 1em 0;
 	width: max(85vmin,40%);
 	height: auto;
 	border-radius: 20px;
