@@ -206,6 +206,24 @@ body
 	border-radius: 2px;
 	margin: 0px 7px 0px 0px;
 }
+.progress
+{
+	border-radius: 100vmax;
+	overflow: hidden;
+}
+.progress .progress-bar
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: #4a249d;
+	border-radius: 100vmax;
+}
+
+
+
+
 noscript
 {
 	position: fixed;
