@@ -85,7 +85,8 @@ body
 	z-index: 2;
 	margin-top: 5px;
 	height: 180px;
-	border-radius: 75%;
+	width: 100px;
+	border-radius: 50%;
 	border: 3px solid transparent;
 	background-color: var(--accentcol);
 }
