@@ -105,10 +105,14 @@ body
 	justify-content: center;
 	align-items: flex-end;
 }
-.container .middlebar p,.container .middlebar span ion-icon
+.container .middlebar p,.container .middlebar ion-icon
 {
 	color: #fff;
 	font-size: 1.5em;
+}
+.container .middlebar ion-icon
+{
+	margin: 5px;
 }
 .container .middlebar span
 {
