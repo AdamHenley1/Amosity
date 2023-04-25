@@ -206,12 +206,31 @@ body
 	border-radius: 2px;
 	margin: 0px 7px 0px 0px;
 }
-.banner-bg
+.slideshowcontainer
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+.slideshowcontainer .banner-bg
 {
 	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #9287e4;
+}
+.slideshowcontainer .banner-bg .banner-button
+{
+	height: fit-content;
 }
 .progress
 {
+	position: relative;
+	width: 100%;
+	height: 5px;
 	border-radius: 100vmax;
 	overflow: hidden;
 	background-color: aqua;
