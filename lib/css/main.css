@@ -238,6 +238,7 @@ body
 .slidecont .prev,.slidecont .next
 {
 	position: relative;
+	padding: 1em;
 }
 .progress /* this is the size and colour of the progbar */
 {
