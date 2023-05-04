@@ -228,13 +228,14 @@ body
 {
 	position: absolute;
 	height: fit-content;
-	bottom: calc(20px + 2em);
+	bottom: 15px;
+	padding: 0.5em 1.2em;
 	background-color: aqua;
 }
 .slidecont
 {
 	position: absolute;
-	bottom: 15px;
+	bottom: 59px;
 	background-color: aqua;
 }
 .slidecont .prev,.slidecont .next
