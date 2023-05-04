@@ -277,8 +277,9 @@ main article
 }
 #scrollloader
 {
+	position: relative;
 	margin-top: 25vh;
-	width: 100%;
+	width: 100vw;
 	height: 20px;
 	background-color: black;
 }
