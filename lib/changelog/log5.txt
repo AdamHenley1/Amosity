@@ -1,0 +1,3 @@
+Update Alpha
+- complete set of commands kind of buggy
+- made the bot look nice and display "playing -help"
