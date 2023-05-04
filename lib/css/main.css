@@ -205,10 +205,11 @@ body
 .slideshowcontainer
 {
 	position: relative;
-	width: 50%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
-	height: 50vh;
+	height: 100vh;
+	transform: scale(0.8);
 }
 .slideshowcontainer .banner-bg
 {
