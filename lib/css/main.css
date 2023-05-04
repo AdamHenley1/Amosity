@@ -265,29 +265,3 @@ body
 	border-radius: 100vmax;
 }
 
-
-
-
-noscript
-{
-	position: fixed;
-	height: 100vh;
-	width: 100%;
-	background-color: var(--accentcol);
-	color: #fff;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-}
-noscript h1
-{
-	font-size: 4em;
-	margin: 20px;
-}
-noscript p
-{
-	font-size: 3em;
-	margin: 0px 20px;
-}
