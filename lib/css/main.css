@@ -273,6 +273,7 @@ main
 main article
 {
 	min-height: 85vh;
+	background-color: #00000040;
 }
 #scrollloader
 {
