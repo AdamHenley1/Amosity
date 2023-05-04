@@ -220,14 +220,16 @@ body
 	width: 100%;
 	height: 100%;
 	justify-content: center;
-	align-items: center;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .slideshowcontainer .banner-bg .banner-button/* this is the button inside each banner ( used to go to the page shown )*/
 {
+	position: absolute;
 	height: fit-content;
+	bottom: calc(20px + 2em);
+	background-color: aqua;
 }
 .slidecont
 {
