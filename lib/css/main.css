@@ -25,13 +25,8 @@
 }
 body
 {
-	position: fixed;
 	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	background-color: var(--accentcol);
-	overflow: hidden;
 }
 #particles-js,#screen
 {
@@ -268,15 +263,20 @@ body
 main
 {
 	position: relative;
+	width: 100vw;
 }
 
 main article
 {
-	min-height: 85vh;
+	min-height: 70vh;
 	background-color: #00000040;
+	margin: 1em 0;
 }
 #scrollloader
 {
-	width: 100%;
+	position: relative;
+	margin-top: 30.5vh;
+	width: 100vw;
 	height: 20px;
+	background-color: black;
 }
