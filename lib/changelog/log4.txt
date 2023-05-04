@@ -1,0 +1,3 @@
+Update 3.0
+- added sd!start (A stardew crop profits calculator)
+- added a very basic blackjack game
