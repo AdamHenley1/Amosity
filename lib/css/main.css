@@ -210,7 +210,7 @@ body
 {
 	position: relative;
 	width: 50%;
-	height: 100vh;
+	height: 50vh;
 }
 .slideshowcontainer .banner-bg
 {
@@ -227,6 +227,17 @@ body
 .slideshowcontainer .banner-bg .banner-button/* this is the button inside each banner ( used to go to the page shown )*/
 {
 	height: fit-content;
+}
+.slidecont
+{
+ position: relative;
+ display: block;
+ margin: 0 auto;
+}
+.slidecont .prev,.slidecont .next
+{
+
+	position: relative;
 }
 .progress /* this is the size and colour of the progbar */
 {
