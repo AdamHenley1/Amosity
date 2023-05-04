@@ -23,10 +23,6 @@
 	height: 0;
     background-color: var(--accentcol);
 }
-html
-{
-	background-color: #9287e4;
-}
 body
 {
 	position: fixed;
@@ -209,8 +205,11 @@ body
 .slideshowcontainer
 {
 	position: relative;
-	width: 50%;
-	height: 50vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	transform: scale(0.8);
 }
 .slideshowcontainer .banner-bg
 {
@@ -220,32 +219,38 @@ body
 	left: 0;
 	width: 100%;
 	height: 100%;
+	justify-content: center;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .slideshowcontainer .banner-bg .banner-button/* this is the button inside each banner ( used to go to the page shown )*/
 {
+	position: absolute;
 	height: fit-content;
+	bottom: 15px;
+	padding: 0.5em 1.2em;
+	background-color: aqua;
 }
 .slidecont
 {
- position: relative;
- display: block;
- margin: 0 auto;
+	position: absolute;
+	bottom: 59px;
+	background-color: aqua;
 }
 .slidecont .prev,.slidecont .next
 {
-
 	position: relative;
+	padding: 1em;
 }
 .progress /* this is the size and colour of the progbar */
 {
-	position: relative;
-	width: 100px;
+	position: absolute;
+	width: 80%;
 	height: 5px;
 	border-radius: 100vmax;
 	overflow: hidden;
+	bottom: 5px;
 	background-color: aqua;
 }
 .progress .progress-bar/* DONT CHANGE ANYTHING HERE EXCEPT THE COLOUR */
