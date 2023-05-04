@@ -265,3 +265,7 @@ body
 	border-radius: 100vmax;
 }
 
+main article
+{
+	min-height: 85vh;
+}
