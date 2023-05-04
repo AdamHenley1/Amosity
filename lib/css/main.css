@@ -243,6 +243,7 @@ body
 	position: relative;
 	padding: 1em;
 	margin: 0 3em;
+	pointer-events: all;
 }
 .progress /* this is the size and colour of the progbar */
 {
