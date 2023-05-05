@@ -273,7 +273,6 @@ main
 	height: 20px;
 	background-color: black;
 }
-
 main article
 {
     position: relative;
@@ -284,10 +283,8 @@ main article
     border-radius: 20px;
     padding: 1em;
     margin: 0px auto 20px auto;
-    user-select: text;
     color: #cdcdcd;
 }
-
 main article hr
 {
     border: 2px solid #22222230;
