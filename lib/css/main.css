@@ -31,6 +31,7 @@ body
 	background-size: cover;
 	background-image: linear-gradient(to top,#9287e4,#4a249d);
 	color: #fff;
+	
 }
 svg
 {
@@ -320,4 +321,9 @@ nav a svg
 {
 	margin: 5px 1em;
 	height: 40px;
+}
+
+a
+{
+	color: #fff
 }
