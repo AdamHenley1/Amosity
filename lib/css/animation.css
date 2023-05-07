@@ -1,6 +1,6 @@
 @keyframes fadein{
-    from{transform: scale(0.9); opacity: 0.4;}
-    to{transform: scale(1); opacity: 1;}
+    from{transform: translateY(-70px); opacity: 0.4;}
+    to{transform: translateY(0); opacity: 1;}
 }
 
 @keyframes socialfadein{
