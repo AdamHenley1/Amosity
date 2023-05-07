@@ -26,6 +26,7 @@
 body
 {
 	height: 100%;
+	overflow-x: hidden;
 	padding: 50px 0 0 0;
 	background-color: #000;
 	color: #fff;
@@ -210,7 +211,6 @@ li
     width: 100%;
     position: relative;
     height: 10px;
-	background-color: #fff;
 }
 main article
 {
@@ -219,7 +219,6 @@ main article
     font-size: 1.2rem;
     display: block;
     width: max(95vmin,68vw);
-	min-height: 95vh;
     border-radius: 20px;
     padding: 1em;
     margin: 0px auto 20px auto;
