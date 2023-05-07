@@ -28,6 +28,11 @@ body
 	height: 100%;
 	background-color: var(--accentcol);
 }
+svg
+{
+	position: relative;
+	display: block;
+}
 #particles-js,#screen
 {
 	position: fixed;
@@ -197,69 +202,6 @@ body
 	border-radius: 2px;
 	margin: 0px 7px 0px 0px;
 }
-.slideshowcontainer
-{
-	position: relative;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	height: 100vh;
-	transform: scale(0.8);
-}
-.slideshowcontainer .banner-bg
-{
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	justify-content: center;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.slideshowcontainer .banner-bg .banner-button/* this is the button inside each banner ( used to go to the page shown )*/
-{
-	position: absolute;
-	height: fit-content;
-	bottom: 15px;
-	padding: 0.3em 0;
-	background-color: aqua;
-}
-.slidecont
-{
-	position: absolute;
-	pointer-events: none;
-	bottom: 15px;
-}
-.slidecont .prev,.slidecont .next
-{
-	position: relative;
-	padding: 1em;
-	margin: 0 3em;
-	pointer-events: all;
-}
-.progress /* this is the size and colour of the progbar */
-{
-	position: absolute;
-	width: 80%;
-	height: 5px;
-	border-radius: 100vmax;
-	overflow: hidden;
-	bottom: 5px;
-	background-color: aqua;
-}
-.progress .progress-bar/* DONT CHANGE ANYTHING HERE EXCEPT THE COLOUR */
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	background-color: #4a249d;
-	border-radius: 100vmax;
-}
-
 main
 {
 	position: relative;
@@ -348,4 +290,30 @@ main article section svg
 .green
 {
     fill: #77dd77;
+}
+
+nav
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #77dd77;
+}
+nav p
+{
+	position: absolute;
+	width: 100%;
+	line-height: 50px;
+	text-align: center;
+	top: 0;
+	left: 0;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+nav a svg
+{
+	margin: 5px 1em;
+	height: 40px;
 }
