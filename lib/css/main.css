@@ -208,13 +208,13 @@ main
 {
 	position: relative;
 	width: 100vw;
+	height: calc(100vh + 50px);
 }
 #scrollloader
 {
-	position: absolute;
+	position: relative;
 	width: 100vw;
 	height: 20px;
-	bottom: -20px;
 	background-color: black;
 }
 main article
