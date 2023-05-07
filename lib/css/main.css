@@ -30,6 +30,7 @@ body
 	background-color: var(--accentcol);
 	background-size: cover;
 	background-image: linear-gradient(to top,#9287e4,#4a249d);
+	color: #fff;
 }
 svg
 {
