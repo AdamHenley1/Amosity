@@ -28,8 +28,6 @@ body,html
 	height: 100%;
 	padding: 50px 0 0 0;
 	background-color: var(--accentcol);
-	background-size: cover;
-	background-image: linear-gradient(to top,#9287e4,#4a249d);
 	color: #fff;
 	
 }
@@ -326,4 +324,13 @@ nav a svg
 a
 {
 	color: #fff
+}
+#grad
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(#4a249d,transparent);
 }
