@@ -1,6 +1,0 @@
-update 1.0
-- added a function so the bot stays online and have it so when a certain word Is in a sentence then it'll say the responding phrase
-- Changed the token and have hidden it from the public
-- hidden discord token and added more cheese
-- organising and added a to do list
-- Added comments and organised more
