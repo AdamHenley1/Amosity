@@ -204,18 +204,12 @@ li
 	border-radius: 2px;
 	margin: 0px 7px 0px 0px;
 }
-main
-{
-	position: relative;
-	width: 100vw;
-	height: calc(100vh + 50px);
-}
 #scrollloader
 {
-	position: relative;
-	width: 100vw;
-	height: 20px;
-	background-color: #4a249d;
+    margin: 1em 0;
+    width: 100%;
+    position: relative;
+    height: 10px;
 }
 main article
 {
