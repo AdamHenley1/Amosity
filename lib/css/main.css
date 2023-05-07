@@ -25,7 +25,7 @@
 }
 body
 {
-	min-height: 100vh;
+	min-height: calc(100vh + 50px);
 	padding: 50px 0 0 0;
 	background-color: var(--accentcol);
 	background-size: cover;
@@ -211,10 +211,10 @@ main
 }
 #scrollloader
 {
-	position: relative;
-	margin-top: 30.5vh;
+	position: absolute;
 	width: 100vw;
 	height: 20px;
+	bottom: -20px;
 	background-color: black;
 }
 main article
