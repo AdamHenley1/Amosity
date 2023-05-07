@@ -312,3 +312,28 @@ a
 	z-index: -4;
 	background-image: linear-gradient(#4a249d,transparent);
 }
+.center 
+{
+	text-align: center;
+	position: relative;
+	top: 30vh;
+	left: 0;
+  }
+.Main-heading
+{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.Sub-heading
+{
+	position: relative;
+	top: 0;
+	left: 20px;
+}
+.Main-text
+{
+	position: relative;
+	top: 0;
+	left: 35px;
+}
