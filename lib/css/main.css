@@ -35,6 +35,10 @@ svg
 	position: relative;
 	display: block;
 }
+li
+{
+	margin-left: 25px;
+}
 #particles-js,#screen
 {
 	position: fixed;
