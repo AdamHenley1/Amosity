@@ -208,7 +208,7 @@ main
 {
 	position: relative;
 	width: 100vw;
-	height: calc(100vh + 50px);
+	min-height: calc(100vh + 50px);
 }
 #scrollloader
 {
