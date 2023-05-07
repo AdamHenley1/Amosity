@@ -23,7 +23,7 @@
 	height: 0;
     background-color: var(--accentcol);
 }
-body,html
+body
 {
 	height: 100%;
 	padding: 50px 0 0 0;
@@ -208,7 +208,7 @@ main
 {
 	position: relative;
 	width: 100vw;
-	min-height: calc(100vh + 50px);
+	height: calc(100vh + 50px);
 }
 #scrollloader
 {
