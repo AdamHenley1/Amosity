@@ -35,6 +35,7 @@ svg
 	position: relative;
 	display: block;
 }
+
 #particles-js,#screen
 {
 	position: fixed;
