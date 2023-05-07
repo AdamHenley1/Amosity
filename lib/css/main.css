@@ -25,7 +25,7 @@
 }
 body
 {
-	min-height: calc(100vh + 50px);
+	height: 100%;
 	padding: 50px 0 0 0;
 	background-color: var(--accentcol);
 	background-size: cover;
