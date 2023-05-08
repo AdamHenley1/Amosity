@@ -36,6 +36,7 @@ svg
 {
 	position: relative;
 	display: block;
+	color: white;
 }
 li
 {
@@ -379,6 +380,7 @@ span{
 	border-radius: 2em 2em 2em 2em;
 	border-style: solid;
 	border-color: black;
+	background-color: #141414;
 	border-width: 5px;
 	z-index: 2;
 	padding-top: 25px;
