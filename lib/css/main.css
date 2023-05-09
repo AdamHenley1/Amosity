@@ -356,7 +356,7 @@ span{
     background: url(../../icon/img/clipboard-outline.svg)no-repeat;
 	position: relative;
 	top: -50px;
-	left: 94.8%;
+	left: 70vw;
     padding: 25px 50px;
 	z-index: 3;
 }
