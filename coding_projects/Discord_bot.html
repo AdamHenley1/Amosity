@@ -16,842 +16,842 @@
             <h1 style="text-align: center";>Main.py</h1>
             <button class="programming_button" onclick="navigator.clipboard.writeText(document.getElementById('discord_bot').innerText);"><span class="programming_buttonhover">Copy to clipboard</span></button>
             <pre><code id="discord_bot">
-                #Python discord bot
-                #The_Gaming_Lounge bot
-                #Update alpha
+#Python discord bot
+#The_Gaming_Lounge bot
+#Update alpha
 
-                #importing stuff
-                import discord
-                import os
-                from datetime import date
-                import time
-                import random as r
-                from keep_alive import keep_alive
-                import asyncio
-                from discord.ext import commands
-                import requests
-                from bs4 import BeautifulSoup
-                import discord
-                import os
-                #from discord.ui import Button
-                import re
+#importing stuff
+import discord
+import os
+from datetime import date
+import time
+import random as r
+from keep_alive import keep_alive
+import asyncio
+from discord.ext import commands
+import requests
+from bs4 import BeautifulSoup
+import discord
+import os
+#from discord.ui import Button
+import re
 
-                #Initialize
-                my_secret=os.environ['DISCORD_TOKEN']
-                client = discord.Client()#Creates Client
+#Initialize
+my_secret=os.environ['DISCORD_TOKEN']
+client = discord.Client()#Creates Client
 
-                #colours
-                green = discord.Color.from_rgb(53,94,59)
-                Red = discord.Color.from_rgb(252, 114, 114)
-                purple = discord.Color.from_rgb(146, 135, 228)
+#colours
+green = discord.Color.from_rgb(53,94,59)
+Red = discord.Color.from_rgb(252, 114, 114)
+purple = discord.Color.from_rgb(146, 135, 228)
 
-                #lists
-                hannah = [
-                'hannah',"Hannah",'<@474687104794755106>'
-                ]
-                cheese = [
-                "cheese","Cheese"
-                ]
-                Sarah = [
-                "sarah","Sarah","Endofox","endofox","<@706896343561535570>"
-                ]
-                rps = [
-                'Rock','Paper','Scissors','Exit'
-                ]
-                Mark = [
-                "mark","Mark","<@582298475950112779>"
-                ]
-                Number = [
-                1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-                ]
-                Suit = [
-                "Diamond","Spades","Hearts","Clubs"
-                ]
-                Crops = [
-                'Bluejazz','Cauliflower','Coffee','Garlic','Greenbean','Kale','Parsnips','Potatoes','Rhubarb','Strawberry','Tulip','Rice','Blueberry','Corn','Hops','Peppers','Melon','Poppy','Radish','Redcabbage','Starfruit','Spangle','Sunflower','Tomato','Wheat','Amaranth',
-                'Artichoke','Beet','Bokchoy','Cranberries','EggPlant','Fairy','Grape','Pumpkin','Yam','Ancientfruit','Cactusfruit','Pineapple','Taroroot','Sweetgemberry','Tea'
-                ]
-                Buy_Price=[
-                30,80,2500,40,60,70,20,50,100,100,20,40,80,150,60,40,80,100,40,100,400,50,200,50,10,70,30,20,50,240,20,200,60,100,60,550,150,0,0,100,0
-                ]
-                #FIX
-                Grow_Time = [
-                7,12,10,4,10,6,4,6,13,8,6,6,10,13,14,5,12,7,6,9,13,8,8,11,4,7,8,6,4,7,5,10,12,13,10,28,12,7,14,10,24,20
-                ]
-                #FIX
-                Regrow_Time = [
-                7,12,2,4,3,6,4,6,13,4,6,6,4,4,1,3,12,7,6,9,13,8,8,4,4,7,8,6,4,5,5,12,3,13,10,7,3,7,10,24,1
-                ]
-                Base_NG =[
-                50,175,15,60,40,110,35,80,220,120,30,30,50,50,25,40,250,140,90,260,750,90,80,60,25,150,160,100,80,75,60,290,80,320,160,550,75,300,100,3000,50
-                ]
-                Base_SG =[
-                62,218,18,75,50,137,43,100,275,150,37,37,62,62,31,50,312,175,112,325,937,112,100,75,31,187,200,125,100,93,75,362,100,400,200,687,93,375,125,3750,50
-                ]
-                Base_GG =[
-                75,262,22,90,60,165,52,120,330,180,45,45,75,75,37,60,375,210,135,390,1125,135,120,90,37,225,240,150,120,112,90,435,120,480,240,825,112,450,150,4500,50
-                ]
-                Vegetable = [
-                'Cauliflower','Garlic','Greenbean','Kale','Parsnips','Potatoes','Rice','Corn','Radish','Redcabbage','Tomato','Amaranth','Artichoke','Beet','EggPlant','Pumpkin','Yam','Taroroot'
-                ]
-                Fruit = [
-                'Rhubarb','Strawberry','Blueberry','Peppers','Melon','Starfruit','Redcabbage','Grape','Ancientfruit','Cactusfruit','Pineapple','Cranberries'
-                ]
+#lists
+hannah = [
+'hannah',"Hannah",'<@474687104794755106>'
+]
+cheese = [
+"cheese","Cheese"
+]
+Sarah = [
+"sarah","Sarah","Endofox","endofox","<@706896343561535570>"
+]
+rps = [
+'Rock','Paper','Scissors','Exit'
+]
+Mark = [
+"mark","Mark","<@582298475950112779>"
+]
+Number = [
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+]
+Suit = [
+"Diamond","Spades","Hearts","Clubs"
+]
+Crops = [
+'Bluejazz','Cauliflower','Coffee','Garlic','Greenbean','Kale','Parsnips','Potatoes','Rhubarb','Strawberry','Tulip','Rice','Blueberry','Corn','Hops','Peppers','Melon','Poppy','Radish','Redcabbage','Starfruit','Spangle','Sunflower','Tomato','Wheat','Amaranth',
+'Artichoke','Beet','Bokchoy','Cranberries','EggPlant','Fairy','Grape','Pumpkin','Yam','Ancientfruit','Cactusfruit','Pineapple','Taroroot','Sweetgemberry','Tea'
+]
+Buy_Price=[
+30,80,2500,40,60,70,20,50,100,100,20,40,80,150,60,40,80,100,40,100,400,50,200,50,10,70,30,20,50,240,20,200,60,100,60,550,150,0,0,100,0
+]
+#FIX
+Grow_Time = [
+7,12,10,4,10,6,4,6,13,8,6,6,10,13,14,5,12,7,6,9,13,8,8,11,4,7,8,6,4,7,5,10,12,13,10,28,12,7,14,10,24,20
+]
+#FIX
+Regrow_Time = [
+7,12,2,4,3,6,4,6,13,4,6,6,4,4,1,3,12,7,6,9,13,8,8,4,4,7,8,6,4,5,5,12,3,13,10,7,3,7,10,24,1
+]
+Base_NG =[
+50,175,15,60,40,110,35,80,220,120,30,30,50,50,25,40,250,140,90,260,750,90,80,60,25,150,160,100,80,75,60,290,80,320,160,550,75,300,100,3000,50
+]
+Base_SG =[
+62,218,18,75,50,137,43,100,275,150,37,37,62,62,31,50,312,175,112,325,937,112,100,75,31,187,200,125,100,93,75,362,100,400,200,687,93,375,125,3750,50
+]
+Base_GG =[
+75,262,22,90,60,165,52,120,330,180,45,45,75,75,37,60,375,210,135,390,1125,135,120,90,37,225,240,150,120,112,90,435,120,480,240,825,112,450,150,4500,50
+]
+Vegetable = [
+'Cauliflower','Garlic','Greenbean','Kale','Parsnips','Potatoes','Rice','Corn','Radish','Redcabbage','Tomato','Amaranth','Artichoke','Beet','EggPlant','Pumpkin','Yam','Taroroot'
+]
+Fruit = [
+'Rhubarb','Strawberry','Blueberry','Peppers','Melon','Starfruit','Redcabbage','Grape','Ancientfruit','Cactusfruit','Pineapple','Cranberries'
+]
 
-                #Definining things
-                def total_num(hand):
-                    total = 0
-                    for i in range(len(hand)):
-                        total = total + int(hand[i])
-                    return total
+#Definining things
+def total_num(hand):
+    total = 0
+    for i in range(len(hand)):
+        total = total + int(hand[i])
+    return total
 
-                def check(message):
-                    try:
-                        int(message.content)
-                        return True
-                    except ValueError:
-                        return False
+def check(message):
+    try:
+        int(message.content)
+        return True
+    except ValueError:
+        return False
 
-                def TextFile(Text,crop):  
-                    file = open('TXT-Files/Stardew-calc/'+ Text)
-                    content = file.readlines()
-                    percentage = (content[crop])
-                    return percentage
+def TextFile(Text,crop):  
+    file = open('TXT-Files/Stardew-calc/'+ Text)
+    content = file.readlines()
+    percentage = (content[crop])
+    return percentage
 
 
 
-                #command to tell me bots online 
-                @client.event
-                async def on_ready():
-                    activity = discord.Game(name="-help | Amosity.net", type=4)
-                    await client.change_presence(status=discord.Status.online, activity=activity)
-                    print('We have logged in as {0.user}'.format(client))
+#command to tell me bots online 
+@client.event
+async def on_ready():
+    activity = discord.Game(name="-help | Amosity.net", type=4)
+    await client.change_presence(status=discord.Status.online, activity=activity)
+    print('We have logged in as {0.user}'.format(client))
 
-                #main code
-                @client.event
-                async def on_message(message):
-                if message.author == client.user:
-                    return
+#main code
+@client.event
+async def on_message(message):
+if message.author == client.user:
+    return
 
-                    #Variables
-                    image = "https://static.wikia.nocookie.net/unofficial-alphabet-lore/images/f/f0/G-U-N.png/revision/latest?cb=20221017203718"
-                    role_id = '<@&1088484644900585642>'
-                    my_server = '1005832526151032862'
-                    msg = message.content
-                    #Commands
+    #Variables
+    image = "https://static.wikia.nocookie.net/unofficial-alphabet-lore/images/f/f0/G-U-N.png/revision/latest?cb=20221017203718"
+    role_id = '<@&1088484644900585642>'
+    my_server = '1005832526151032862'
+    msg = message.content
+    #Commands
 
-                    #/help Command
-                    #description of command here
-                    if message.content == ("-help"):
-                        embedVar = discord.Embed(title="Commands", color=purple)
-                        embedVar.add_field(name='General Commands',value='-date, -time, -vegans, -RPS, -compliments, -FGPT',inline=False)
-                        embedVar.add_field(name='Stardew Commands',value='sd!calc',inline=False)
-                        embedVar.add_field(name='Blackjack Commands',value='p-blackjack',inline=False)
-                        await message.channel.send(embed=embedVar)
-                        
-                    #Rock Paper Scissors Game
-                    if message.content == ('-RPS'):
-                        temp = 0
-                        while temp == 0:    
-                        embedVar = discord.Embed(title="Rock,Paper or scissors (Exit to Exit)", color=green)
-                        embedVar.set_thumbnail(url = image)
-                        await message.channel.send(embed=embedVar)
-                        msg = await client.wait_for('message')
-                        attempt = msg.content.title()
-                        for i in range(len(rps)):
-                            if attempt == rps[i]:
-                            RSP_Location = i
-                            temp = 0
-                        Comp_Choice = r.randint(0,2)
-                        #Rock
-                        if Comp_Choice == 0:
-                            #Rock
-                            if RSP_Location == 0:
-                            embedVar = discord.Embed(title="It's A Draw", color=green)
-                            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
-                            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            #Paper
-                            elif RSP_Location == 1:
-                            embedVar = discord.Embed(title="You Win", color=green)
-                            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
-                            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            #Scissor
-                            elif RSP_Location == 2:
-                            embedVar = discord.Embed(title="You Lose", color=green)
-                            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
-                            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            elif RSP_Location == 3:
-                            embedVar = discord.Embed(title="Bye", color=green)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            Temp = 1
-                            break
-                        #Paper
-                        elif Comp_Choice == 1:
-                            #rock
-                            if RSP_Location == 0:
-                            embedVar = discord.Embed(title="You Lose", color=green)
-                            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
-                            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            #Paper
-                            elif RSP_Location == 1:
-                            embedVar = discord.Embed(title="Its A Draw", color=green)
-                            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
-                            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            #Scissor
-                            elif RSP_Location == 2:
-                            embedVar = discord.Embed(title="You Win", color=green)
-                            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
-                            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            
-                            elif RSP_Location == 3:
-                            embedVar = discord.Embed(title="Bye", color=green)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            Temp = 1
-                            break
-                        #Scissors
-                        elif Comp_Choice == 2:
-                            #rock
-                            if RSP_Location == 0:
-                            embedVar = discord.Embed(title="You Win", color=green)
-                            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
-                            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            #Paper
-                            elif RSP_Location == 1:
-                            embedVar = discord.Embed(title="You Lose", color=green)
-                            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
-                            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            #Scissor
-                            elif RSP_Location == 2:
-                            embedVar = discord.Embed(title="Its A Draw", color=green)
-                            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
-                            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
+    #/help Command
+    #description of command here
+    if message.content == ("-help"):
+        embedVar = discord.Embed(title="Commands", color=purple)
+        embedVar.add_field(name='General Commands',value='-date, -time, -vegans, -RPS, -compliments, -FGPT',inline=False)
+        embedVar.add_field(name='Stardew Commands',value='sd!calc',inline=False)
+        embedVar.add_field(name='Blackjack Commands',value='p-blackjack',inline=False)
+        await message.channel.send(embed=embedVar)
+        
+    #Rock Paper Scissors Game
+    if message.content == ('-RPS'):
+        temp = 0
+        while temp == 0:    
+        embedVar = discord.Embed(title="Rock,Paper or scissors (Exit to Exit)", color=green)
+        embedVar.set_thumbnail(url = image)
+        await message.channel.send(embed=embedVar)
+        msg = await client.wait_for('message')
+        attempt = msg.content.title()
+        for i in range(len(rps)):
+            if attempt == rps[i]:
+            RSP_Location = i
+            temp = 0
+        Comp_Choice = r.randint(0,2)
+        #Rock
+        if Comp_Choice == 0:
+            #Rock
+            if RSP_Location == 0:
+            embedVar = discord.Embed(title="It's A Draw", color=green)
+            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
+            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            #Paper
+            elif RSP_Location == 1:
+            embedVar = discord.Embed(title="You Win", color=green)
+            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
+            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            #Scissor
+            elif RSP_Location == 2:
+            embedVar = discord.Embed(title="You Lose", color=green)
+            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
+            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            elif RSP_Location == 3:
+            embedVar = discord.Embed(title="Bye", color=green)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            Temp = 1
+            break
+        #Paper
+        elif Comp_Choice == 1:
+            #rock
+            if RSP_Location == 0:
+            embedVar = discord.Embed(title="You Lose", color=green)
+            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
+            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            #Paper
+            elif RSP_Location == 1:
+            embedVar = discord.Embed(title="Its A Draw", color=green)
+            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
+            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            #Scissor
+            elif RSP_Location == 2:
+            embedVar = discord.Embed(title="You Win", color=green)
+            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
+            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            
+            elif RSP_Location == 3:
+            embedVar = discord.Embed(title="Bye", color=green)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            Temp = 1
+            break
+        #Scissors
+        elif Comp_Choice == 2:
+            #rock
+            if RSP_Location == 0:
+            embedVar = discord.Embed(title="You Win", color=green)
+            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
+            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            #Paper
+            elif RSP_Location == 1:
+            embedVar = discord.Embed(title="You Lose", color=green)
+            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
+            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            #Scissor
+            elif RSP_Location == 2:
+            embedVar = discord.Embed(title="Its A Draw", color=green)
+            embedVar.add_field(name='You Chose',value=(rps[RSP_Location]) ,inline=False)
+            embedVar.add_field(name='Computer Chose',value=(rps[Comp_Choice]) ,inline=False)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
 
-                            elif RSP_Location == 3:
-                            embedVar = discord.Embed(title="Bye", color=green)
-                            embedVar.set_thumbnail(url = image)
-                            await message.channel.send(embed=embedVar)
-                            Temp = 1
-                            break
+            elif RSP_Location == 3:
+            embedVar = discord.Embed(title="Bye", color=green)
+            embedVar.set_thumbnail(url = image)
+            await message.channel.send(embed=embedVar)
+            Temp = 1
+            break
 
-                            
-                    #/date Command
-                    #description of command here
-                    if message.content == ('-date'): 
-                        today = date.today()
-                        await message.channel.send(today)
-                    
-                    #/time Command
-                    #description of command here
-                    if message.content == ("-time"):
-                        t = time.localtime()
-                        current_time = time.strftime("The time is: %H:%M:%S", t)
-                        await message.channel.send(current_time)
+            
+    #/date Command
+    #description of command here
+    if message.content == ('-date'): 
+        today = date.today()
+        await message.channel.send(today)
+    
+    #/time Command
+    #description of command here
+    if message.content == ("-time"):
+        t = time.localtime()
+        current_time = time.strftime("The time is: %H:%M:%S", t)
+        await message.channel.send(current_time)
 
-                    #/vegan Command
-                    #description of command here
-                    if message.content == ('-vegans'):
-                        rvnumber = r.randint(1,100)
-                        if rvnumber <= 3:
-                        await message.channel.send("Vegans aren't the worst I suppose")
-                        elif rvnumber >= 4:
-                        await message.channel.send("No one likes Vegans") 
-                        
-                    #/compliment Command
-                    #description of command here
-                    if message.content == ("-compliments"):
-                        mention = message.author.mention
-                        response = f"{mention}"
-                        await message.channel.send(response)
-                        file = open('TXT-Files/Main/compliments.txt')
-                        rcnumber = r.randint(0,106)
-                        content = file.readlines()
-                        await message.channel.send(content[rcnumber])
-                    
-                    #/Fitness_gram_pacer_test Command
-                    #description of command here
-                    if message.content == ("-FGPT"):
-                        file = open('TXT-Files/Main/Fitness_Gram_pacer_test.txt')
-                        content = file.readlines()
-                        await message.channel.send(content[0])
+    #/vegan Command
+    #description of command here
+    if message.content == ('-vegans'):
+        rvnumber = r.randint(1,100)
+        if rvnumber <= 3:
+        await message.channel.send("Vegans aren't the worst I suppose")
+        elif rvnumber >= 4:
+        await message.channel.send("No one likes Vegans") 
+        
+    #/compliment Command
+    #description of command here
+    if message.content == ("-compliments"):
+        mention = message.author.mention
+        response = f"{mention}"
+        await message.channel.send(response)
+        file = open('TXT-Files/Main/compliments.txt')
+        rcnumber = r.randint(0,106)
+        content = file.readlines()
+        await message.channel.send(content[rcnumber])
+    
+    #/Fitness_gram_pacer_test Command
+    #description of command here
+    if message.content == ("-FGPT"):
+        file = open('TXT-Files/Main/Fitness_Gram_pacer_test.txt')
+        content = file.readlines()
+        await message.channel.send(content[0])
 
-                        
-                    # Random Messages that Trigger a reply
-                        
-                    #variables
-                    msg = message.content
+        
+    # Random Messages that Trigger a reply
+        
+    #variables
+    msg = message.content
 
-                    if any(word in msg for word in hannah):
-                        await message.channel.send("<@474687104794755106>")
-                        file = open('TXT-Files/Main/compliments.txt')
-                        rcnumber = r.randint(0,106)
-                        content = file.readlines()
-                        await message.channel.send(content[rcnumber])
+    if any(word in msg for word in hannah):
+        await message.channel.send("<@474687104794755106>")
+        file = open('TXT-Files/Main/compliments.txt')
+        rcnumber = r.randint(0,106)
+        content = file.readlines()
+        await message.channel.send(content[rcnumber])
 
-                    if any(word in msg for word in Mark):
-                        await message.channel.send("<@582298475950112779>")
-                        file = open('TXT-Files/Main/Mark1.txt')
-                        rcnumber = 0
-                        content = file.readlines()
-                        await message.channel.send(content[rcnumber])
+    if any(word in msg for word in Mark):
+        await message.channel.send("<@582298475950112779>")
+        file = open('TXT-Files/Main/Mark1.txt')
+        rcnumber = 0
+        content = file.readlines()
+        await message.channel.send(content[rcnumber])
 
-                    if any(word in msg for word in cheese):
-                        await message.channel.send("<@474687104794755106> ")
-                        file = open('TXT-Files/Main/cheese.txt')
-                        rnumber = r.randint(0,11)
-                        content = file.readlines()
-                        new_msg = await message.channel.send(content[rnumber])
-                        await new_msg.add_reaction("👍")
-                        tempc = 100
-                        while tempc != 101:
-                        thumb = "👍"
-                        reaction, user = await client.wait_for('reaction_add', timeout=5.0)
-                        if user != client.user:
-                            if reaction.emoji == thumb:
-                            file = open('TXT-Files/Main/cheese.txt')
-                            rnumber = r.randint(0,11)
-                            content = file.readlines()
-                            new_msg = await message.channel.send(content[rnumber])        
-                            await new_msg.add_reaction("👍")
-                            tempc = 100
-                            
-                    if any(word in msg for word in Sarah):
-                        await message.channel.send("<@706896343561535570> here are some flowers because your name was mentioned")
-                        file = open('TXT-Files/Main/Flowers.txt')
-                        rfnumber = r.randint(0,49)
-                        content = file.readlines()
-                        new_msgf = await message.channel.send(content[rfnumber])
-                        await new_msgf.add_reaction("🌻")
-                        temp = 0
-                        while temp < 1:
-                        flower = "🌻"
-                        reaction, user = await client.wait_for('reaction_add', timeout=5.0)
-                        if user != client.user:
-                            if reaction.emoji == flower:
-                            file = open('TXT-Files/Main/Flowers.txt')
-                            rfnumber = r.randint(0,47) 
-                            content = file.readlines()
-                            new_msgf = await message.channel.send(content[rfnumber])        
-                            await new_msgf.add_reaction("🌻")
-                            temp = 0
+    if any(word in msg for word in cheese):
+        await message.channel.send("<@474687104794755106> ")
+        file = open('TXT-Files/Main/cheese.txt')
+        rnumber = r.randint(0,11)
+        content = file.readlines()
+        new_msg = await message.channel.send(content[rnumber])
+        await new_msg.add_reaction("👍")
+        tempc = 100
+        while tempc != 101:
+        thumb = "👍"
+        reaction, user = await client.wait_for('reaction_add', timeout=5.0)
+        if user != client.user:
+            if reaction.emoji == thumb:
+            file = open('TXT-Files/Main/cheese.txt')
+            rnumber = r.randint(0,11)
+            content = file.readlines()
+            new_msg = await message.channel.send(content[rnumber])        
+            await new_msg.add_reaction("👍")
+            tempc = 100
+            
+    if any(word in msg for word in Sarah):
+        await message.channel.send("<@706896343561535570> here are some flowers because your name was mentioned")
+        file = open('TXT-Files/Main/Flowers.txt')
+        rfnumber = r.randint(0,49)
+        content = file.readlines()
+        new_msgf = await message.channel.send(content[rfnumber])
+        await new_msgf.add_reaction("🌻")
+        temp = 0
+        while temp < 1:
+        flower = "🌻"
+        reaction, user = await client.wait_for('reaction_add', timeout=5.0)
+        if user != client.user:
+            if reaction.emoji == flower:
+            file = open('TXT-Files/Main/Flowers.txt')
+            rfnumber = r.randint(0,47) 
+            content = file.readlines()
+            new_msgf = await message.channel.send(content[rfnumber])        
+            await new_msgf.add_reaction("🌻")
+            temp = 0
 
-                    #Poker Bot 
-                    if message.content.lower() == ('p-blackjack'): 
-                        member = message.author
-                        role = discord.utils.get(member.guild.roles, name="Table_1")
-                        channels = client.get_channel(1088759535033909281)
-                        #Join_Game  = discord.ui.Button(style = discord.ButtonStyle.red, label="Join",emoji="🃏")
-                        #buttons_view = discord.ui.View()
-                        #buttons_view.add_item(Join_Game)
-                        embedVar = discord.Embed(title="Join The BlackJack Table", color=Red)
-                        #msg = await message.channel.send(embed=embedVar,view = buttons_view)
-                        msg = await message.channel.send(embed=embedVar)
-                        #thread = await msg.create_thread(name="Table 1", auto_archive_duration=60,member_count = 6 )
-                        await msg.add_reaction("🃏")
-                        max = 0
-                        tempc = 100
-                        while tempc != 101:
-                        join = "🃏"
+    #Poker Bot 
+    if message.content.lower() == ('p-blackjack'): 
+        member = message.author
+        role = discord.utils.get(member.guild.roles, name="Table_1")
+        channels = client.get_channel(1088759535033909281)
+        #Join_Game  = discord.ui.Button(style = discord.ButtonStyle.red, label="Join",emoji="🃏")
+        #buttons_view = discord.ui.View()
+        #buttons_view.add_item(Join_Game)
+        embedVar = discord.Embed(title="Join The BlackJack Table", color=Red)
+        #msg = await message.channel.send(embed=embedVar,view = buttons_view)
+        msg = await message.channel.send(embed=embedVar)
+        #thread = await msg.create_thread(name="Table 1", auto_archive_duration=60,member_count = 6 )
+        await msg.add_reaction("🃏")
+        max = 0
+        tempc = 100
+        while tempc != 101:
+        join = "🃏"
+        reaction, user = await client.wait_for("reaction_add")
+        if user != client.user:
+        if reaction.emoji == join:
+            max = max + 1
+            if max < 6:
+            await member.add_roles(role)
+            times= await channels.send("welcome to Table_1 <@&1088484644900585642> the game will begin shortly")
+            time.sleep(5)
+            await times.delete()
+            embedVar = discord.Embed(title="WELCOME TO BLACKJACK!", color=Red)
+            await channels.send(embed=embedVar)
+            choice = 0
+            play = 0
+            while play == 0:
+                Players_Hand=[]
+                Dealers_Hand=[]
+                for i in range(2):
+                Ptemp = r.randint(0,9)
+                Players_Hand.append(Number[Ptemp])
+                Dtemp = r.randint(0,9)
+                Dealers_Hand.append(Number[Dtemp])
+                temp = 0
+                while temp != 1:
+                embedVar = discord.Embed(title="Each Hand", color=Red)
+                embedVar.add_field(name = "Dealer", value=("The dealer is showing a " + str(Dealers_Hand[0])), inline=False)
+                embedVar.add_field(name = "Player", value=("You have a " + str(Players_Hand) + " for a total of " + str(total_num(Players_Hand))), inline=False)
+                await channels.send(embed=embedVar)
+                embedVar = discord.Embed(title="Do you want to [H]it, [S]tand, or [Q]uit: ", color=Red)
+                msg = await channels.send(embed=embedVar)
+                await msg.add_reaction("🇭")
+                await msg.add_reaction("🇸")
+                await msg.add_reaction("🇶")
+                Hit = "🇭"
+                Stand = "🇸"
+                Quit = "🇶"
+                Yes = "🇾"
+                No = "🇳"
+                reaction, user = await client.wait_for("reaction_add")
+                if user != client.user:
+                    if reaction.emoji == Hit:
+                    Ptemp = r.randint(0,9)
+                    Players_Hand.append(Number[Ptemp])
+                    while total_num(Dealers_Hand) < 17:
+                        Dtemp = r.randint(0,9)
+                        Dealers_Hand.append(Number[Dtemp])
+                    if total_num(Dealers_Hand) > 21:
+                        embedVar = discord.Embed(title="You win!!! Dealer went bust", color=Red)
+                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
+                        msg = await channels.send(embed=embedVar)
+                        await msg.add_reaction("🇾")
+                        await msg.add_reaction("🇳")
                         reaction, user = await client.wait_for("reaction_add")
                         if user != client.user:
-                        if reaction.emoji == join:
-                            max = max + 1
-                            if max < 6:
-                            await member.add_roles(role)
-                            times= await channels.send("welcome to Table_1 <@&1088484644900585642> the game will begin shortly")
-                            time.sleep(5)
-                            await times.delete()
-                            embedVar = discord.Embed(title="WELCOME TO BLACKJACK!", color=Red)
-                            await channels.send(embed=embedVar)
-                            choice = 0
+                        if reaction.emoji == Yes:
                             play = 0
-                            while play == 0:
-                                Players_Hand=[]
-                                Dealers_Hand=[]
-                                for i in range(2):
-                                Ptemp = r.randint(0,9)
-                                Players_Hand.append(Number[Ptemp])
-                                Dtemp = r.randint(0,9)
-                                Dealers_Hand.append(Number[Dtemp])
-                                temp = 0
-                                while temp != 1:
-                                embedVar = discord.Embed(title="Each Hand", color=Red)
-                                embedVar.add_field(name = "Dealer", value=("The dealer is showing a " + str(Dealers_Hand[0])), inline=False)
-                                embedVar.add_field(name = "Player", value=("You have a " + str(Players_Hand) + " for a total of " + str(total_num(Players_Hand))), inline=False)
-                                await channels.send(embed=embedVar)
-                                embedVar = discord.Embed(title="Do you want to [H]it, [S]tand, or [Q]uit: ", color=Red)
-                                msg = await channels.send(embed=embedVar)
-                                await msg.add_reaction("🇭")
-                                await msg.add_reaction("🇸")
-                                await msg.add_reaction("🇶")
-                                Hit = "🇭"
-                                Stand = "🇸"
-                                Quit = "🇶"
-                                Yes = "🇾"
-                                No = "🇳"
-                                reaction, user = await client.wait_for("reaction_add")
-                                if user != client.user:
-                                    if reaction.emoji == Hit:
-                                    Ptemp = r.randint(0,9)
-                                    Players_Hand.append(Number[Ptemp])
-                                    while total_num(Dealers_Hand) < 17:
-                                        Dtemp = r.randint(0,9)
-                                        Dealers_Hand.append(Number[Dtemp])
-                                    if total_num(Dealers_Hand) > 21:
-                                        embedVar = discord.Embed(title="You win!!! Dealer went bust", color=Red)
-                                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
-                                        msg = await channels.send(embed=embedVar)
-                                        await msg.add_reaction("🇾")
-                                        await msg.add_reaction("🇳")
-                                        reaction, user = await client.wait_for("reaction_add")
-                                        if user != client.user:
-                                        if reaction.emoji == Yes:
-                                            play = 0
-                                            temp = 1
-                                        if reaction.emoji == No:
-                                            play = 1
-                                            temp = 1
-                                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                            await channels.send(embed=embedVar)
-                                        
-                                    elif total_num(Dealers_Hand) == 21:
-                                        embedVar = discord.Embed(title="You lose!!! Dealer had a blackjack", color=Red)
-                                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
-                                        msg = await channels.send(embed=embedVar)
-                                        await msg.add_reaction("🇾")
-                                        await msg.add_reaction("🇳")
-                                        reaction, user = await client.wait_for("reaction_add")
-                                        if user != client.user:
-                                        if reaction.emoji == Yes:
-                                            play = 0
-                                            temp = 1
-                                        if reaction.emoji == No:
-                                            play = 1
-                                            temp = 1
-                                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                            await channels.send(embed=embedVar)
-                                        
-                                    elif total_num(Players_Hand) > 21:
-                                        embedVar = discord.Embed(title="You lose!!! You Went Bust", color=Red)
-                                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
-                                        msg = await channels.send(embed=embedVar)
-                                        await msg.add_reaction("🇾")
-                                        await msg.add_reaction("🇳")
-                                        reaction, user = await client.wait_for("reaction_add")
-                                        if user != client.user:
-                                        if reaction.emoji == Yes:
-                                            play = 0
-                                            temp = 1
-                                        if reaction.emoji == No:
-                                            play = 1
-                                            temp = 1
-                                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                            await channels.send(embed=embedVar)
-                                        
-                                    elif total_num(Players_Hand) == 21:
-                                        embedVar = discord.Embed(title="You win!!! BLACKJACK !!!! LESS GOOOOOOOO ", color=Red)
-                                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
-                                        msg = await channels.send(embed=embedVar)
-                                        await msg.add_reaction("🇾")
-                                        await msg.add_reaction("🇳")
-                                        reaction, user = await client.wait_for("reaction_add")
-                                        if user != client.user:
-                                        if reaction.emoji == Yes:
-                                            play = 0
-                                            temp = 1
-                                        if reaction.emoji == No:
-                                            play = 1
-                                            temp = 1
-                                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                            await channels.send(embed=embedVar)
-                                        
-                                    elif reaction.emoji == Stand:
-                                    while total_num(Dealers_Hand) < 17:
-                                        Dtemp = r.randint(0,9)
-                                        Dealers_Hand.append(Number[Dtemp])
-                                        
-                                    if total_num(Dealers_Hand) > 21:
-                                        embedVar = discord.Embed(title="You win!!! Dealer Went Bust", color=Red)
-                                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
-                                        msg = await channels.send(embed=embedVar)
-                                        await msg.add_reaction("🇾")
-                                        await msg.add_reaction("🇳")
-                                        reaction, user = await client.wait_for("reaction_add")
-                                        if user != client.user:
-                                        if reaction.emoji == Yes:
-                                            play = 0
-                                            temp = 1
-                                        if reaction.emoji == No:
-                                            play = 1
-                                            temp = 1
-                                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                            await channels.send(embed=embedVar)
-                                        
-                                    elif total_num(Dealers_Hand) == 21:
-                                        embedVar = discord.Embed(title="You Lost!!! Dealer Had A Blackjack", color=Red)
-                                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
-                                        msg = await channels.send(embed=embedVar)
-                                        await msg.add_reaction("🇾")
-                                        await msg.add_reaction("🇳")
-                                        reaction, user = await client.wait_for("reaction_add")
-                                        if user != client.user:
-                                        if reaction.emoji == Yes:
-                                            play = 0
-                                            temp = 1
-                                        if reaction.emoji == No:
-                                            play = 1
-                                            temp = 1
-                                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                            await channels.send(embed=embedVar)
-                                        
-                                    elif total_num(Players_Hand) == 21:
-                                        embedVar = discord.Embed(title="You win!!! BLACKJACK !!!! LESS GOOOOOOOO ", color=Red)
-                                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
-                                        msg = await channels.send(embed=embedVar)
-                                        await msg.add_reaction("🇾")
-                                        await msg.add_reaction("🇳")
-                                        reaction, user = await client.wait_for("reaction_add")
-                                        if user != client.user:
-                                        if reaction.emoji == Yes:
-                                            play = 0
-                                            temp = 1
-                                        if reaction.emoji == No:
-                                            play = 1
-                                            temp = 1
-                                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                            await channels.send(embed=embedVar)
-                                        
-                                    elif total_num(Players_Hand) > total_num(Dealers_Hand):
-                                        embedVar = discord.Embed(title="You win!!! You had higher cards than the dealer", color=Red)
-                                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
-                                        msg = await channels.send(embed=embedVar)
-                                        await msg.add_reaction("🇾")
-                                        await msg.add_reaction("🇳")
-                                        reaction, user = await client.wait_for("reaction_add")
-                                        if user != client.user:
-                                        if reaction.emoji == Yes:
-                                            play = 0
-                                            temp = 1
-                                        if reaction.emoji == No:
-                                            play = 1
-                                            temp = 1
-                                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                            await channels.send(embed=embedVar)
-                                        
-                                    elif total_num(Players_Hand) < total_num(Dealers_Hand):
-                                        embedVar = discord.Embed(title="You lose!!! Dealer had higher cards than you", color=Red)
-                                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
-                                        msg = await channels.send(embed=embedVar)
-                                        await msg.add_reaction("🇾")
-                                        await msg.add_reaction("🇳")
-                                        reaction, user = await client.wait_for("reaction_add")
-                                        if user != client.user:
-                                        if reaction.emoji == Yes:
-                                            play = 0
-                                            temp = 1
-                                        if reaction.emoji == No:
-                                            play = 1
-                                            temp = 1
-                                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                            await channels.send(embed=embedVar)
-                                        
-                                    elif total_num(Players_Hand) == total_num(Dealers_Hand):
-                                        embedVar = discord.Embed(title="You draw!!! You both had the same number", color=Red)
-                                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
-                                        msg = await channels.send(embed=embedVar)
-                                        await msg.add_reaction("🇾")
-                                        await msg.add_reaction("🇳")
-                                        reaction, user = await client.wait_for("reaction_add")
-                                        if user != client.user:
-                                        if reaction.emoji == Yes:
-                                            play = 0
-                                            temp = 1
-                                        if reaction.emoji == No:
-                                            play = 1
-                                            temp = 1
-                                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                            await channels.send(embed=embedVar)
-                                        
-                                    elif reaction.emoji == Quit:
-                                    embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
-                                    await channels.send(embed=embedVar)
-                                    temp = 1
-                                    play = 1
-                            else:
-                            times = await message.channel.send('Table is currently full try again later')
-                            time.sleep(5)
-                            await times.delete()
-
-                    
-                #Calculation Command
-                #description of command here
-                if message.content.lower() == ("sd!calc"):
-                    
-                    #amount of tiles
-                    temp = 0
-                    while temp == 0:
-                    embedVar = discord.Embed(title="How many Crops will you be planting", color=purple)
-                    embedVar.set_thumbnail(url = 'https://gameranx.com/wp-content/uploads/2021/12/stardew-valley.jpg')
-                    await message.channel.send(embed=embedVar)
-                    
-                    msg = await client.wait_for('message')
-                    attempt = int(msg.content)
-                
-                    if attempt > 0 :
-                        Tiles = attempt
-                        temp = 1
-                    else:
-                        temp = 0
-
-
-                        
-                    #Type of crop
-                    temp = 0
-                    while temp == 0:
-                    
-                    file = open('TXT-Files/Stardew-calc/Crops.txt')
-                    content = file.readlines()
-                    Crop_Type = (content[0:])
-                    
-                    embedVar = discord.Embed(title="What Crop do you want to plant", description='Type "List" to see the list of Crops', color=purple)
-                    embedVar.set_thumbnail(url = 'https://gameranx.com/wp-content/uploads/2021/12/stardew-valley.jpg')
-                    await message.channel.send(embed=embedVar)
-                    
-                    msg = await client.wait_for('message')
-                    attempt = str(msg.content)
-                    attempt = attempt.title()
-                    
-                    if attempt == 'List':
-                        embedVar = discord.Embed(title="The Crops That are in the game are:", color=purple)
-                        embedVar.add_field(name='Crops',value=('\n'.join(Crop_Type)) ,inline=False)
-                        await message.channel.send(embed=embedVar)
-                    
-                    else:
-                        for i in range(len(Crops)):
-                        if attempt == Crops[i]:
-                            Crop_List_Location = i
                             temp = 1
+                        if reaction.emoji == No:
+                            play = 1
+                            temp = 1
+                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                            await channels.send(embed=embedVar)
+                        
+                    elif total_num(Dealers_Hand) == 21:
+                        embedVar = discord.Embed(title="You lose!!! Dealer had a blackjack", color=Red)
+                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
+                        msg = await channels.send(embed=embedVar)
+                        await msg.add_reaction("🇾")
+                        await msg.add_reaction("🇳")
+                        reaction, user = await client.wait_for("reaction_add")
+                        if user != client.user:
+                        if reaction.emoji == Yes:
+                            play = 0
+                            temp = 1
+                        if reaction.emoji == No:
+                            play = 1
+                            temp = 1
+                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                            await channels.send(embed=embedVar)
+                        
+                    elif total_num(Players_Hand) > 21:
+                        embedVar = discord.Embed(title="You lose!!! You Went Bust", color=Red)
+                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
+                        msg = await channels.send(embed=embedVar)
+                        await msg.add_reaction("🇾")
+                        await msg.add_reaction("🇳")
+                        reaction, user = await client.wait_for("reaction_add")
+                        if user != client.user:
+                        if reaction.emoji == Yes:
+                            play = 0
+                            temp = 1
+                        if reaction.emoji == No:
+                            play = 1
+                            temp = 1
+                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                            await channels.send(embed=embedVar)
+                        
+                    elif total_num(Players_Hand) == 21:
+                        embedVar = discord.Embed(title="You win!!! BLACKJACK !!!! LESS GOOOOOOOO ", color=Red)
+                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
+                        msg = await channels.send(embed=embedVar)
+                        await msg.add_reaction("🇾")
+                        await msg.add_reaction("🇳")
+                        reaction, user = await client.wait_for("reaction_add")
+                        if user != client.user:
+                        if reaction.emoji == Yes:
+                            play = 0
+                            temp = 1
+                        if reaction.emoji == No:
+                            play = 1
+                            temp = 1
+                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                            await channels.send(embed=embedVar)
+                        
+                    elif reaction.emoji == Stand:
+                    while total_num(Dealers_Hand) < 17:
+                        Dtemp = r.randint(0,9)
+                        Dealers_Hand.append(Number[Dtemp])
+                        
+                    if total_num(Dealers_Hand) > 21:
+                        embedVar = discord.Embed(title="You win!!! Dealer Went Bust", color=Red)
+                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
+                        msg = await channels.send(embed=embedVar)
+                        await msg.add_reaction("🇾")
+                        await msg.add_reaction("🇳")
+                        reaction, user = await client.wait_for("reaction_add")
+                        if user != client.user:
+                        if reaction.emoji == Yes:
+                            play = 0
+                            temp = 1
+                        if reaction.emoji == No:
+                            play = 1
+                            temp = 1
+                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                            await channels.send(embed=embedVar)
+                        
+                    elif total_num(Dealers_Hand) == 21:
+                        embedVar = discord.Embed(title="You Lost!!! Dealer Had A Blackjack", color=Red)
+                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
+                        msg = await channels.send(embed=embedVar)
+                        await msg.add_reaction("🇾")
+                        await msg.add_reaction("🇳")
+                        reaction, user = await client.wait_for("reaction_add")
+                        if user != client.user:
+                        if reaction.emoji == Yes:
+                            play = 0
+                            temp = 1
+                        if reaction.emoji == No:
+                            play = 1
+                            temp = 1
+                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                            await channels.send(embed=embedVar)
+                        
+                    elif total_num(Players_Hand) == 21:
+                        embedVar = discord.Embed(title="You win!!! BLACKJACK !!!! LESS GOOOOOOOO ", color=Red)
+                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
+                        msg = await channels.send(embed=embedVar)
+                        await msg.add_reaction("🇾")
+                        await msg.add_reaction("🇳")
+                        reaction, user = await client.wait_for("reaction_add")
+                        if user != client.user:
+                        if reaction.emoji == Yes:
+                            play = 0
+                            temp = 1
+                        if reaction.emoji == No:
+                            play = 1
+                            temp = 1
+                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                            await channels.send(embed=embedVar)
+                        
+                    elif total_num(Players_Hand) > total_num(Dealers_Hand):
+                        embedVar = discord.Embed(title="You win!!! You had higher cards than the dealer", color=Red)
+                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
+                        msg = await channels.send(embed=embedVar)
+                        await msg.add_reaction("🇾")
+                        await msg.add_reaction("🇳")
+                        reaction, user = await client.wait_for("reaction_add")
+                        if user != client.user:
+                        if reaction.emoji == Yes:
+                            play = 0
+                            temp = 1
+                        if reaction.emoji == No:
+                            play = 1
+                            temp = 1
+                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                            await channels.send(embed=embedVar)
+                        
+                    elif total_num(Players_Hand) < total_num(Dealers_Hand):
+                        embedVar = discord.Embed(title="You lose!!! Dealer had higher cards than you", color=Red)
+                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
+                        msg = await channels.send(embed=embedVar)
+                        await msg.add_reaction("🇾")
+                        await msg.add_reaction("🇳")
+                        reaction, user = await client.wait_for("reaction_add")
+                        if user != client.user:
+                        if reaction.emoji == Yes:
+                            play = 0
+                            temp = 1
+                        if reaction.emoji == No:
+                            play = 1
+                            temp = 1
+                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                            await channels.send(embed=embedVar)
+                        
+                    elif total_num(Players_Hand) == total_num(Dealers_Hand):
+                        embedVar = discord.Embed(title="You draw!!! You both had the same number", color=Red)
+                        embedVar.add_field(name='play?',value="Do you want to play again?",inline=False)
+                        msg = await channels.send(embed=embedVar)
+                        await msg.add_reaction("🇾")
+                        await msg.add_reaction("🇳")
+                        reaction, user = await client.wait_for("reaction_add")
+                        if user != client.user:
+                        if reaction.emoji == Yes:
+                            play = 0
+                            temp = 1
+                        if reaction.emoji == No:
+                            play = 1
+                            temp = 1
+                            embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                            await channels.send(embed=embedVar)
+                        
+                    elif reaction.emoji == Quit:
+                    embedVar = discord.Embed(title="Bye Bye For Now", color=Red)
+                    await channels.send(embed=embedVar)
+                    temp = 1
+                    play = 1
+            else:
+            times = await message.channel.send('Table is currently full try again later')
+            time.sleep(5)
+            await times.delete()
 
-                    
-                    file = open('TXT-Files/Stardew-calc/Food_Photos.txt')
-                    content = file.readlines()
-                    JPEG = (content[Crop_List_Location])
+    
+#Calculation Command
+#description of command here
+if message.content.lower() == ("sd!calc"):
+    
+    #amount of tiles
+    temp = 0
+    while temp == 0:
+    embedVar = discord.Embed(title="How many Crops will you be planting", color=purple)
+    embedVar.set_thumbnail(url = 'https://gameranx.com/wp-content/uploads/2021/12/stardew-valley.jpg')
+    await message.channel.send(embed=embedVar)
+    
+    msg = await client.wait_for('message')
+    attempt = int(msg.content)
 
-                    #amount of harvests
-                    embedVar = discord.Embed(title="How Many Harvests Would You Like To do",color=purple)
-                    embedVar.set_thumbnail(url = JPEG)
-                    await message.channel.send(embed=embedVar)
-                    
-                    msg = await client.wait_for('message')
-                    attempt = int(msg.content)
-                    Harvests = attempt
-                    Time = Grow_Time[Crop_List_Location] + int(attempt-1)*Regrow_Time[Crop_List_Location]
-                    
-                    #Farming level + perks
-                    # full proof it
-                    temp = 0
-                    while temp == 0:
-                    
-                    embedVar = discord.Embed(title="What Farming Level Are You", color=purple)
-                    embedVar.set_thumbnail(url = 'https://stardewvalleywiki.com/mediawiki/images/8/82/Farming_Skill_Icon.png')
-                    await message.channel.send(embed=embedVar)
-                    
-                    msg = await client.wait_for('message')
-                    attempt = int(msg.content)
-                    Farming_Level = attempt
-                    
-                    if Farming_Level > 10:
-                        
-                        temp = 0
-                    
-                    elif Farming_Level == 10:
-                        
-                        embedVar = discord.Embed(title="Do You Have Artisan As Your Perk?", color=purple)
-                        embedVar.set_thumbnail(url = 'https://stardewvalleywiki.com/mediawiki/images/4/46/Artisan.png')
-                        await message.channel.send(embed=embedVar)
-                        
-                        msg = await client.wait_for('message')
-                        attempt = str(msg.content)
-                        attempt = attempt.title()
-                        
-                        if attempt == 'Yes' or 'Y':
-                        
-                        Tiller = 'Yes'
-                        Artisan = 'Yes'
-                        temp = 1 
-                        
-                        elif attempt == 'No' or 'N':
-                        
-                        temp = 1
-                        
-                        else:
-                        
-                        temp = 0
-                    
-                    elif Farming_Level >= 5 and Farming_Level != 10:
-                        
-                        embedVar = discord.Embed(title="Do You Have Tiller As Your Perk?", color=purple)
-                        embedVar.set_thumbnail(url = 'https://stardewvalleywiki.com/mediawiki/images/b/b2/Tiller.png')
-                        await message.channel.send(embed=embedVar)
-                        
-                        msg = await client.wait_for('message')
-                        attempt = str(msg.content)
-                        attempt = attempt.title()
-                        
-                        if attempt == 'Yes' or 'Y':
-                        
-                        Tiller = 'Yes'
-                        Artisan = 'No'
-                        temp = 1 
-                        
-                        elif attempt == 'No' or 'N':
-                        
-                        Tiller = 'No'
-                        Artisan = 'No'
-                        temp = 1
-                        
-                        else:
-                        temp = 0
-                    
-                    elif Farming_Level < 5:
-                        
-                        Tiller = 'No'
-                        Artisan = 'No'
-                        temp = 1
-                        
-
-                    #Amount of Graded Crops You'll Have On Average
-                    NG_amount = ((int(TextFile('NG_percentage.txt',Farming_Level))/100)*Tiles)
-                    SG_amount = ((int(TextFile('SG_percentage.txt',Farming_Level))/100)*Tiles)
-                    GG_amount = ((int(TextFile('GG_percentage.txt',Farming_Level))/100)*Tiles)
-                    kegged_up = 3 * Base_NG[Crop_List_Location]
-
-                    if Grow_Time[Crop_List_Location] == Regrow_Time[Crop_List_Location]:
-                    Total_Buy_Price = ((Buy_Price[Crop_List_Location] * Tiles)*Harvests)
-                    else:
-                    Total_Buy_Price = (Buy_Price[Crop_List_Location] * Tiles)
-                    
-                    if Tiller == "Yes":
-                    NG_Profit = int((NG_amount * (((10/100)*Base_NG[Crop_List_Location])+Base_NG[Crop_List_Location]))*Harvests)
-                    SG_Profit = int((SG_amount * (((10/100)*Base_SG[Crop_List_Location])+Base_SG[Crop_List_Location]))*Harvests)
-                    GG_Profit = int((GG_amount * (((10/100)*Base_GG[Crop_List_Location])+Base_GG[Crop_List_Location]))*Harvests)
-                    Max_Profit = int((NG_Profit+ SG_Profit+ GG_Profit)-Total_Buy_Price)
-                    
-                    elif Tiller == 'No':
-                    NG_Profit = int((NG_amount * Base_NG[Crop_List_Location])*Harvests)
-                    SG_Profit = int((SG_amount * Base_SG[Crop_List_Location])*Harvests)
-                    GG_Profit = int((GG_amount * Base_GG[Crop_List_Location])*Harvests)
-                    Max_Profit = int((NG_Profit+SG_Profit+GG_Profit)-Total_Buy_Price)
-
-                    
-                    if Crop_List_Location == 14:
-                    if Artisan == "Yes":
-                        kegged_up = int((Tiles * (1.4 * 300))*Harvests)
-                        Item = 'Pale Ale'
-                        OImage = "https://stardewvalleywiki.com/mediawiki/images/7/78/Pale_Ale.png"
-                    elif Artisan == "No":
-                        kegged_up = int((Tiles * 300)*Harvests)
-                        Item = 'Pale Ale'
-                        OImage = "https://stardewvalleywiki.com/mediawiki/images/7/78/Pale_Ale.png"
-                        
-                    elif Crop_List_Location == 24:
-                    if Artisan == "Yes":
-                        kegged_up = int((Tiles * (1.4 * 200))*Harvests)
-                        Item = 'Beer'
-                        OImage = "https://stardewvalleywiki.com/mediawiki/images/b/b3/Beer.png"
-                    elif Artisan == "No":
-                        kegged_up = int((Tiles * 200)*Harvests)
-                        Item = 'Beer'
-                        OImage = "https://stardewvalleywiki.com/mediawiki/images/b/b3/Beer.png"
-
-                    elif Crop_List_Location == 40:
-                    if Artisan == "Yes":
-                        kegged_up = int((Tiles * (1.4 * 100))*Harvests)
-                        Item = 'Green Tea'
-                        OImage = "https://stardewvalleywiki.com/mediawiki/images/8/8f/Green_Tea.png"
-                    elif Artisan == "No":
-                        kegged_up = int((Tiles * 100)*Harvests)
-                        Item = 'Green Tea'
-                        OImage = "https://stardewvalleywiki.com/mediawiki/images/8/8f/Green_Tea.png"
-
-                    elif Crop_List_Location == 2:
-                    kegged_up = int((Tiles * 150)*Harvests)
-                    Item = 'Coffee'
-                    OImage = "https://stardewvalleywiki.com/mediawiki/images/e/e9/Coffee.png"
-
-                    elif Crops[Crop_List_Location] in Vegetable:
-                    if Artisan == "Yes":
-                        kegged_up = int((Tiles * (1.4 * (2.25 * Base_NG[Crop_List_Location])))*Harvests)
-                        Item = 'Juice'
-                        OImage = "https://stardewvalleywiki.com/mediawiki/images/f/f1/Juice.png"
-                    elif Artisan == "No":
-                        kegged_up = int((Tiles * (2.25 * Base_NG[Crop_List_Location]))*Harvests)
-                        Item = 'Juice'
-                        OImage = "https://stardewvalleywiki.com/mediawiki/images/f/f1/Juice.png"
-                    
-                    elif Crops[Crop_List_Location] in Fruit:
-                    if Artisan == "Yes":
-                        kegged_up = int((Tiles * (1.4 * (3 * Base_NG[Crop_List_Location])))*Harvests)
-                        Item = 'Wine'
-                        OImage = "https://stardewvalleywiki.com/mediawiki/images/6/69/Wine.png"
-                    elif Artisan == "No":
-                        kegged_up = int((Tiles * (3 * Base_NG[Crop_List_Location]))*Harvests)
-                        Item = 'Wine'
-                        OImage = "https://stardewvalleywiki.com/mediawiki/images/6/69/Wine.png"
-                    
-                    
-
-                    embedVar = discord.Embed(title="Overview", description='Info On The Crop You May Need', color=purple)
-                    embedVar.set_thumbnail(url = JPEG)
-                    embedVar.add_field(name="Time To Grow Initially", value=str(Grow_Time[Crop_List_Location])+'Days', inline=False)
-                    if Grow_Time[Crop_List_Location] != Regrow_Time[Crop_List_Location]:
-                    embedVar.add_field(name="Regrow Time (Same if it cant regrow)", value=str(Regrow_Time[Crop_List_Location])+'Days', inline=False)
-                    embedVar.add_field(name='Days to harvest In Total',value=str(Time)+'Days', inline=False)
-                    await message.channel.send(embed=embedVar)
-                    
-                    embedVar = discord.Embed(title="Total Profits From Crops", description='All your costs and info in one', color=purple)
-                    embedVar.set_thumbnail(url = 'https://stardewvalleywiki.com/mediawiki/images/f/fb/Achievement_Homesteader.jpg')
-                    embedVar.add_field(name="Profit From Regular Crops", value=str(NG_Profit)+'G', inline=False)
-                    embedVar.add_field(name="Profit From <:silverstar:1087482080197365773> Crops", value=str(SG_Profit)+'G', inline=False)
-                    embedVar.add_field(name="Profit From <:goldstar:1087482066951745558> Crops", value=str(GG_Profit)+'G', inline=False)
-                    embedVar.add_field(name="Total Cost For Crops", value=str(Total_Buy_Price)+'G', inline=False)
-                    embedVar.add_field(name="Total Profit - Cost", value=str(Max_Profit)+'G', inline=False)
-                    await message.channel.send(embed=embedVar)
-
-                    embedVar = discord.Embed(title="Total Profits If Turned into, " + Item, description='All your costs and info in one', color=purple)
-                    embedVar.set_thumbnail(url = OImage)
-                    embedVar.add_field(name="Profit From" + Item, value=str(kegged_up)+'G', inline=False)
-                    await message.channel.send(embed=embedVar)
-                        
-
-
-
-
+    if attempt > 0 :
+        Tiles = attempt
+        temp = 1
+    else:
+        temp = 0
 
 
+        
+    #Type of crop
+    temp = 0
+    while temp == 0:
+    
+    file = open('TXT-Files/Stardew-calc/Crops.txt')
+    content = file.readlines()
+    Crop_Type = (content[0:])
+    
+    embedVar = discord.Embed(title="What Crop do you want to plant", description='Type "List" to see the list of Crops', color=purple)
+    embedVar.set_thumbnail(url = 'https://gameranx.com/wp-content/uploads/2021/12/stardew-valley.jpg')
+    await message.channel.send(embed=embedVar)
+    
+    msg = await client.wait_for('message')
+    attempt = str(msg.content)
+    attempt = attempt.title()
+    
+    if attempt == 'List':
+        embedVar = discord.Embed(title="The Crops That are in the game are:", color=purple)
+        embedVar.add_field(name='Crops',value=('\n'.join(Crop_Type)) ,inline=False)
+        await message.channel.send(embed=embedVar)
+    
+    else:
+        for i in range(len(Crops)):
+        if attempt == Crops[i]:
+            Crop_List_Location = i
+            temp = 1
+
+    
+    file = open('TXT-Files/Stardew-calc/Food_Photos.txt')
+    content = file.readlines()
+    JPEG = (content[Crop_List_Location])
+
+    #amount of harvests
+    embedVar = discord.Embed(title="How Many Harvests Would You Like To do",color=purple)
+    embedVar.set_thumbnail(url = JPEG)
+    await message.channel.send(embed=embedVar)
+    
+    msg = await client.wait_for('message')
+    attempt = int(msg.content)
+    Harvests = attempt
+    Time = Grow_Time[Crop_List_Location] + int(attempt-1)*Regrow_Time[Crop_List_Location]
+    
+    #Farming level + perks
+    # full proof it
+    temp = 0
+    while temp == 0:
+    
+    embedVar = discord.Embed(title="What Farming Level Are You", color=purple)
+    embedVar.set_thumbnail(url = 'https://stardewvalleywiki.com/mediawiki/images/8/82/Farming_Skill_Icon.png')
+    await message.channel.send(embed=embedVar)
+    
+    msg = await client.wait_for('message')
+    attempt = int(msg.content)
+    Farming_Level = attempt
+    
+    if Farming_Level > 10:
+        
+        temp = 0
+    
+    elif Farming_Level == 10:
+        
+        embedVar = discord.Embed(title="Do You Have Artisan As Your Perk?", color=purple)
+        embedVar.set_thumbnail(url = 'https://stardewvalleywiki.com/mediawiki/images/4/46/Artisan.png')
+        await message.channel.send(embed=embedVar)
+        
+        msg = await client.wait_for('message')
+        attempt = str(msg.content)
+        attempt = attempt.title()
+        
+        if attempt == 'Yes' or 'Y':
+        
+        Tiller = 'Yes'
+        Artisan = 'Yes'
+        temp = 1 
+        
+        elif attempt == 'No' or 'N':
+        
+        temp = 1
+        
+        else:
+        
+        temp = 0
+    
+    elif Farming_Level >= 5 and Farming_Level != 10:
+        
+        embedVar = discord.Embed(title="Do You Have Tiller As Your Perk?", color=purple)
+        embedVar.set_thumbnail(url = 'https://stardewvalleywiki.com/mediawiki/images/b/b2/Tiller.png')
+        await message.channel.send(embed=embedVar)
+        
+        msg = await client.wait_for('message')
+        attempt = str(msg.content)
+        attempt = attempt.title()
+        
+        if attempt == 'Yes' or 'Y':
+        
+        Tiller = 'Yes'
+        Artisan = 'No'
+        temp = 1 
+        
+        elif attempt == 'No' or 'N':
+        
+        Tiller = 'No'
+        Artisan = 'No'
+        temp = 1
+        
+        else:
+        temp = 0
+    
+    elif Farming_Level < 5:
+        
+        Tiller = 'No'
+        Artisan = 'No'
+        temp = 1
+        
+
+    #Amount of Graded Crops You'll Have On Average
+    NG_amount = ((int(TextFile('NG_percentage.txt',Farming_Level))/100)*Tiles)
+    SG_amount = ((int(TextFile('SG_percentage.txt',Farming_Level))/100)*Tiles)
+    GG_amount = ((int(TextFile('GG_percentage.txt',Farming_Level))/100)*Tiles)
+    kegged_up = 3 * Base_NG[Crop_List_Location]
+
+    if Grow_Time[Crop_List_Location] == Regrow_Time[Crop_List_Location]:
+    Total_Buy_Price = ((Buy_Price[Crop_List_Location] * Tiles)*Harvests)
+    else:
+    Total_Buy_Price = (Buy_Price[Crop_List_Location] * Tiles)
+    
+    if Tiller == "Yes":
+    NG_Profit = int((NG_amount * (((10/100)*Base_NG[Crop_List_Location])+Base_NG[Crop_List_Location]))*Harvests)
+    SG_Profit = int((SG_amount * (((10/100)*Base_SG[Crop_List_Location])+Base_SG[Crop_List_Location]))*Harvests)
+    GG_Profit = int((GG_amount * (((10/100)*Base_GG[Crop_List_Location])+Base_GG[Crop_List_Location]))*Harvests)
+    Max_Profit = int((NG_Profit+ SG_Profit+ GG_Profit)-Total_Buy_Price)
+    
+    elif Tiller == 'No':
+    NG_Profit = int((NG_amount * Base_NG[Crop_List_Location])*Harvests)
+    SG_Profit = int((SG_amount * Base_SG[Crop_List_Location])*Harvests)
+    GG_Profit = int((GG_amount * Base_GG[Crop_List_Location])*Harvests)
+    Max_Profit = int((NG_Profit+SG_Profit+GG_Profit)-Total_Buy_Price)
+
+    
+    if Crop_List_Location == 14:
+    if Artisan == "Yes":
+        kegged_up = int((Tiles * (1.4 * 300))*Harvests)
+        Item = 'Pale Ale'
+        OImage = "https://stardewvalleywiki.com/mediawiki/images/7/78/Pale_Ale.png"
+    elif Artisan == "No":
+        kegged_up = int((Tiles * 300)*Harvests)
+        Item = 'Pale Ale'
+        OImage = "https://stardewvalleywiki.com/mediawiki/images/7/78/Pale_Ale.png"
+        
+    elif Crop_List_Location == 24:
+    if Artisan == "Yes":
+        kegged_up = int((Tiles * (1.4 * 200))*Harvests)
+        Item = 'Beer'
+        OImage = "https://stardewvalleywiki.com/mediawiki/images/b/b3/Beer.png"
+    elif Artisan == "No":
+        kegged_up = int((Tiles * 200)*Harvests)
+        Item = 'Beer'
+        OImage = "https://stardewvalleywiki.com/mediawiki/images/b/b3/Beer.png"
+
+    elif Crop_List_Location == 40:
+    if Artisan == "Yes":
+        kegged_up = int((Tiles * (1.4 * 100))*Harvests)
+        Item = 'Green Tea'
+        OImage = "https://stardewvalleywiki.com/mediawiki/images/8/8f/Green_Tea.png"
+    elif Artisan == "No":
+        kegged_up = int((Tiles * 100)*Harvests)
+        Item = 'Green Tea'
+        OImage = "https://stardewvalleywiki.com/mediawiki/images/8/8f/Green_Tea.png"
+
+    elif Crop_List_Location == 2:
+    kegged_up = int((Tiles * 150)*Harvests)
+    Item = 'Coffee'
+    OImage = "https://stardewvalleywiki.com/mediawiki/images/e/e9/Coffee.png"
+
+    elif Crops[Crop_List_Location] in Vegetable:
+    if Artisan == "Yes":
+        kegged_up = int((Tiles * (1.4 * (2.25 * Base_NG[Crop_List_Location])))*Harvests)
+        Item = 'Juice'
+        OImage = "https://stardewvalleywiki.com/mediawiki/images/f/f1/Juice.png"
+    elif Artisan == "No":
+        kegged_up = int((Tiles * (2.25 * Base_NG[Crop_List_Location]))*Harvests)
+        Item = 'Juice'
+        OImage = "https://stardewvalleywiki.com/mediawiki/images/f/f1/Juice.png"
+    
+    elif Crops[Crop_List_Location] in Fruit:
+    if Artisan == "Yes":
+        kegged_up = int((Tiles * (1.4 * (3 * Base_NG[Crop_List_Location])))*Harvests)
+        Item = 'Wine'
+        OImage = "https://stardewvalleywiki.com/mediawiki/images/6/69/Wine.png"
+    elif Artisan == "No":
+        kegged_up = int((Tiles * (3 * Base_NG[Crop_List_Location]))*Harvests)
+        Item = 'Wine'
+        OImage = "https://stardewvalleywiki.com/mediawiki/images/6/69/Wine.png"
+    
+    
+
+    embedVar = discord.Embed(title="Overview", description='Info On The Crop You May Need', color=purple)
+    embedVar.set_thumbnail(url = JPEG)
+    embedVar.add_field(name="Time To Grow Initially", value=str(Grow_Time[Crop_List_Location])+'Days', inline=False)
+    if Grow_Time[Crop_List_Location] != Regrow_Time[Crop_List_Location]:
+    embedVar.add_field(name="Regrow Time (Same if it cant regrow)", value=str(Regrow_Time[Crop_List_Location])+'Days', inline=False)
+    embedVar.add_field(name='Days to harvest In Total',value=str(Time)+'Days', inline=False)
+    await message.channel.send(embed=embedVar)
+    
+    embedVar = discord.Embed(title="Total Profits From Crops", description='All your costs and info in one', color=purple)
+    embedVar.set_thumbnail(url = 'https://stardewvalleywiki.com/mediawiki/images/f/fb/Achievement_Homesteader.jpg')
+    embedVar.add_field(name="Profit From Regular Crops", value=str(NG_Profit)+'G', inline=False)
+    embedVar.add_field(name="Profit From <:silverstar:1087482080197365773> Crops", value=str(SG_Profit)+'G', inline=False)
+    embedVar.add_field(name="Profit From <:goldstar:1087482066951745558> Crops", value=str(GG_Profit)+'G', inline=False)
+    embedVar.add_field(name="Total Cost For Crops", value=str(Total_Buy_Price)+'G', inline=False)
+    embedVar.add_field(name="Total Profit - Cost", value=str(Max_Profit)+'G', inline=False)
+    await message.channel.send(embed=embedVar)
+
+    embedVar = discord.Embed(title="Total Profits If Turned into, " + Item, description='All your costs and info in one', color=purple)
+    embedVar.set_thumbnail(url = OImage)
+    embedVar.add_field(name="Profit From" + Item, value=str(kegged_up)+'G', inline=False)
+    await message.channel.send(embed=embedVar)
+        
 
 
-                keep_alive()
-                client.run(my_secret)
+
+
+
+
+
+
+keep_alive()
+client.run(my_secret)
 
             </code></pre>
         </div>
