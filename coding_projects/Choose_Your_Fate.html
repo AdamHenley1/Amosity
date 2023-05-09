@@ -1,0 +1,252 @@
+<html lang="en-US">
+    <head>
+		<title>python Code</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no"/>
+        <meta name="description" content="My own personal website for fun because Yesn't = Big cheesy tender chicken wings">
+        <link rel="icon" type="image/x-icon" href="../icon/img/1.png">
+        <link rel="stylesheet" type="text/css" href="../lib/css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="../lib/css/animation.css"/>
+        <link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="../lib/css/scale.css"/>
+        <script src="https://natski.netlify.com/lib/js/jquery.js"></script>
+	</head>
+    <body>
+        <div id="cyf_grad"></div>
+        <div class="code">
+            <h1 style="text-align: center";>Choose_Your_Fate.py</h1>
+            <button class="programming_button" onclick="navigator.clipboard.writeText(document.getElementById('Choose_Your_Fate').innerText);"><span class="programming_buttonhover">Copy to clipboard</span></button>
+            <pre><code id="Choose_Your_Fate">
+                choose = ["pipe 1","pipe 2","pipe 3"]
+                import random
+
+                mistake = random.randint(0,2)
+
+                name = input("what is your full name:")
+                print("welcome",name,"you are one of a few people testing this game")
+                choice = input("choose a pipe 1,2,3:")
+                if choice == "1":
+                if mistake == 0:
+                    print("you enter pipe 1")
+                    p1a1 = input("you slide down into a dark forest where do u go north east south or west:")
+                    if p1a1 == "north":
+                        p1a2 = input("you go north deeper and deeper into the forest and you come across a shed do u enter it:")
+                        if p1a2 == "yes":#finsh after you take the stuff part (boss fight)#if u die you loose and if you kill the boss you win and go back to your life
+                            print("you enter the shed and come across three items a katana(damage 20 health 5 hits, a dragon glass dager(damage 5 hits 20) and a m19 pistol with a round of 8 bullets(damage 40 hits 8)")
+                            p1a3 = input("what do u choose katana, dagger or pistol:")
+                            if p1a3 == "katana":
+                                print("you take the katana and go on")
+                            elif p1a3 == "dagger":
+                                print("you tak the dagger and go on")
+                            elif p1a3 == "pistol":
+                                print("you take the m19 pistol and go on")
+                            elif p1a3 == "all":#hidden
+                                print("you glitch the game and take all three how dare you you filthy animal")
+                        elif p1a2 == "no":#encounter a boss and depending on your moves you will live or die #if u die you loose and if you kill the boss you win and go back to your life
+                            print("you leave it and head deeper into the forest")
+                    elif p1a1 == "east":
+                        print("you turn east in which somehow you know your which way that is WHERES YOU COMPASS")
+                    elif p1a1 == "south":
+                        print("you turn south and see a shadow dash maybe more")
+                        p1a2 = input("do u shrug it off or run for you life:")
+                        if p1a2 == "run":
+                            print("you dash but see the shadows slowly fade but not for long")
+                            print("you run and run, then all of a sudden fall into a pit trap")
+                            print("you have one option to wait")
+                        elif p1a2 == "shrug":
+                            print("you shrug it off and take a nice calm walk down the road")
+                            print("you see the shadow again slowly creeping up behind you")
+                            p1a3 = input("do u turn around and punch or turn around to greet yourself:")#finish greet option
+                            if p1a3 == "punch":
+                                print("you turn around and punch a old man that is crippled in the leg and you just murdered him")
+                                print("you search him and you find his I.D his name is john allard")
+                                print("you know somehow that your nick name is know n.k.j noah killed john")#add more
+                                print("you get trumitiezed and start having heart attack and it started to happen in your coma you have been stuck in for 75 years your family is sad at your death but at least you didnt go into the real world killing")
+
+                            elif p1a3 == "greet":
+                                print("you turn and greet yourself because your a lovely person here take a shot gun with unlimited damage but one shot")
+                                print("you see an old man he calles himself john allard")
+                                p1a4 = input("kill him (yes or no):")
+                                if p1a4 == "yes":
+                                    print("you wasted your shot gun that would save your life well done")
+                                elif p1a4 == "no":
+                                    print("congrats you are really kind that shot gun with one shot make it two")
+                                elif p1a4 == "glitch":
+                                    print("why cheat")
+                                    print("you get booted out the game and every one that is there when you wake up looks at you in shock that you have finally waken up from your coma you have been in for 75 years")
+                    elif p1a1 == "west":#add more
+                        print("you head west and see a little girl that has hanged herself you look at her wrists they have the devils symbols on both of them")
+
+                elif mistake == 1:
+                    print("you enter pipe 2")#add poilets seat
+                    p2a1 = input("you shoot down the pipe and see time warp around you and you end up in a space ship that is crashing where do u go the suit room the poilots seat or go into kriogenic sleep:") 
+                    if p2a1 == "suit room":
+                        print("you get into the suits and head out into space but you went into the wrong one you went into the discarded room all of a sudden you start soffacating and die a painfull death")
+                    elif p2a1 == "sleep":
+                        print("you go into kriogenic sleep and you never wake up again because your stupid and how would that help you at all in any situation you got crushed it puts you to sleep not protects you jeez")
+                    elif p2a1 == "escape pod":#hidden
+                        print("you glitch the game how dare you anyway you head into the escape pod towards k3e13 a habital planet in which they have the friendly kigenburgs")
+                        #work needed 
+                elif mistake == 2:#change to a different idea make longer and more intresting
+                    print("you enter pipe 3")
+                    print("you slide down the pipe feeling a shiver go down your spine you end up in miss bryants lair beeing fattend up so the evil monster that is bryant will eat you:")
+                    p3a1 = input("what do u do pick the lock, or sit and wait:")
+                    if p3a1 == "pick the lock":
+                        print("how are you gonna pick the lock with what so you look around and find a pin and pick the lock you exit,you head the only way which is straight and you end in a everlasting maze you will die if you enter but you enter anyway")
+                        print("further and further")
+                        print("you starve and slowly die and your bones will be traked by her dogs or her")
+                    elif p3a1 == "wait":
+                        print("you wait untill you die then the big fat slober monster slops up you and spits out your bones for the dogs")
+                    elif p3a1 == "glitch":#hidden
+                        print("you glitch and you feel your body being torn in half and half until you cells have been ripped into 159 million million pieces")#the imataion game reference (159 million million)
+                        
+
+
+                elif choice == "2":#uncomplete will be when the top one is done copy it to the two below
+                    if mistake == 0:
+                        print("you enter pipe 1")
+                        p1a1 = input("you slide down into a dark forest where do u go north east south or west:")
+                        if p1a1 == "north":
+                            p1a2 = input("you go north deeper and deeper into the forest and you come across a shed do u enter it:")
+                            if p1a2 == "yes":
+                                print("you enter the shed and come across three items a katana(damage 20 health 5 hits, a dragon glass dager(damage 5 hits 20) and a m19 pistol with a round of 8 bullets(damage 40 hits 8)")
+                                p1a3 = input("what do u choose katana, dagger or pistol:")
+                                if p1a3 == "katana":
+                                    print("you take the katana and go on")
+                                elif p1a3 == "dagger":
+                                    print("you tak the dagger and go on")
+                                elif p1a3 == "pistol":
+                                    print("you take the m19 pistol and go on")
+                                elif p1a3 == "all":#hidden
+                                    print("you glitch the game and take all three how dare you you filthy animal")
+                            elif p1a2 == "no":
+                                print("you leave it and head deeper into the forest")
+                        elif p1a1 == "east":
+                            print("you turn east in which somehow you know your which way that is WHERES YOU COMPASS")
+                        elif p1a1 == "south":
+                            print("you turn south and see a shadow dash maybe more")
+                            p1a2 = input("do u shrug it off or run for you life:")
+                            if p1a2 == "run":
+                                print("you dash but see the shadows slowly fade but not for long")
+                                print("you run and run, then all of a sudden fall into a pit trap")
+                                print("you have one option to wait")
+                            elif p1a2 == "shrug":
+                                print("you shrug it off and take a nice calm walk down the road")
+                                print("you see the shadow again slowly creeping up behind you")
+                                p1a3 = input("do u turn around and punch or turn aroung to greet yourself")
+                                if p1a3 == "punch":
+                                    print("you turn around and punch a old man that is crippled in the leg and you just murdered him")
+                                    print("you search him and you find his I.D his name is john allard")
+                                    print("you know somehow that your nick name is know n.k.j noah killed john") 
+                        elif p1a1 == "west":
+                            print("you head west and see a little girl that has hanged herself you look at her wrists they have the devils symbols on both of them")
+
+                    elif mistake == 1:
+                        print("you enter pipe 2")
+                    p2a1 = input("you shoot down the pipe and see time warp around you and you end up in a space ship that is crashing where do u go the suit room the poilots seat or go into kriogenic sleep:") 
+                    if p2a1 == "suit room":
+                        print("you get into the suits and head out into space but you went into the wrong one you went into the discarded room all of a sudden you start soffacating and die a painfull death")
+                    elif p2a1 == "sleep":
+                        print("you go into kriogenic sleep and you never wake up again because your stupid and how would that help you at all in any situation you got crushed it puts you to sleep not protects you jeez")
+                    elif p2a1 == "escape pod":#hidden
+                        print("you glitch the game how dare you anyway you head into the escape pod towards k3e13 a habital planet in which they have the friendly kigenburgs")
+                        
+                    elif mistake == 2:
+                        print("you enter pipe 3")
+                        print("you slide down the pipe feeling a shiver go down your spine you end up in miss bryants lair beeing fattend up so the evil monster that is bryant will eat you:")
+                        p3a1 = input("what do u do pick the lock, or wait:")
+                        if p3a1 == "pick the lock":
+                            print("how are you gonna pick the lock with what so you look around and find a pin and pick the lock you exit,you head the only way which is straight and you end in a everlasting maze you will die if you enter but you enter anyway")
+                            print("further and further")
+                            print("you starve and slowly die and your bones will be traked by her dogs or her")
+                        elif p3a1 == "wait":
+                            print("you wait until you die then the big fat slober monster slops up you and spits out your bones for the dogs")
+                        elif p3a1 == "glitch":#hidden
+                            print("you glitch and you feel your body being torn in half and half until you cells have been ripped into 159 million million pieces")#the imataion game reference (159 million million)
+                        
+
+                elif choice == "3":#uncomplete will be when the top one is done copy it to the two below
+                    if mistake == 0:
+                        print("you enter pipe 1")
+                        p1a1 = input("you slide down into a dark forest where do u go north east south or west:")
+                        if p1a1 == "north":
+                            p1a2 = input("you go north deeper and deeper into the forest and you come across a shed do u enter it:")
+                            if p1a2 == "yes":
+                                print("you enter the shed and come across three items a katana(damage 20 health 5 hits, a dragon glass dager(damage 5 hits 20) and a m19 pistol with a round of 8 bullets(damage 40 hits 8)")
+                                p1a3 = input("what do u choose katana, dagger or pistol:")
+                                if p1a3 == "katana":
+                                    print("you take the katana and go on")
+                                elif p1a3 == "dagger":
+                                    print("you tak the dagger and go on")
+                                elif p1a3 == "pistol":
+                                    print("you take the m19 pistol and go on")
+                                elif p1a3 == "all":#hidden
+                                    print("you glitch the game and take all three how dare you you filthy animal")
+                            elif p1a2 == "no":
+                                print("you leave it and head deeper into the forest")
+                        elif p1a1 == "east":
+                            print("you turn east in which somehow you know your which way that is WHERES YOU COMPASS")
+                        elif p1a1 == "south":
+                            print("you turn south and see a shadow dash maybe more")
+                            p1a2 = input("do u shrug it off or run for you life:")
+                            if p1a2 == "run":
+                                print("you dash but see the shadows slowly fade but not for long")
+                                print("you run and run, then all of a sudden fall into a pit trap")
+                                print("you have one option to wait")
+                            elif p1a2 == "shrug":
+                                print("you shrug it off and take a nice calm walk down the road")
+                                print("you see the shadow again slowly creeping up behind you")
+                                p1a3 = input("do u turn around and punch or turn aroung to greet yourself")
+                                if p1a3 == "punch":
+                                    print("you turn around and punch a old man that is crippled in the leg and you just murdered him")
+                                    print("you search him and you find his I.D his name is john allard")
+                                    print("you know somehow that your nick name is know n.k.j noah killed john") 
+                        elif p1a1 == "west":
+                            print("you head west and see a little girl that has hanged herself you look at her wrists they have the devils symbols on both of them")
+
+                    elif mistake == 1:
+                        print("you enter pipe 2")
+                        p2a1 = input("you shoot down the pipe and see time warp around you and you end up in a space ship that is crashing where do u go the suit room the poilots seat or go into kriogenic sleep:") 
+                        if p2a1 == "suit room":
+                            print("you get into the suits and head out into space but you went into the wrong one you went into the discarded room all of a sudden you start soffacating and die a painfull death")
+                        elif p2a1 == "sleep":
+                            print("you go into kriogenic sleep and you never wake up again because your stupid and how would that help you at all in any situation you got crushed it puts you to sleep not protects you jeez")
+                        elif p2a1 == "escape pod":#hidden
+                            print("you glitch the game how dare you anyway you head into the escape pod towards k3e13 a habital planet in which they have the friendly kigenburgs")
+                        
+                    elif mistake == 2:
+                        print("you enter pipe 3")
+                        print("you slide down the pipe feeling a shiver go down your spine you end up in miss bryants lair beeing fattend up so the evil monster that is bryant will eat you:")
+                        p3a1 = input("what do u do pick the lock, or sit and wait:")
+                        if p3a1 == "pick the lock":
+                            print("how are you gonna pick the lock with what so you look around and find a pin and pick the lock you exit,you head the only way which is straight and you end in a everlasting maze you will die if you enter but you enter anyway")
+                            print("further and further")
+                            print("you starve and slowly die and your bones will be traked by her dogs or her")
+                        elif p3a1 == "wait":
+                            print("you wait untill you die then the big fat slober monster slops up you and spits out your bones for the dogs")
+                        elif p3a1 == "glitch":#hidden
+                            print("you glitch and you feel your body being torn in half and half until you cells have been ripped into 159 million million pieces")#the imataion game reference (159 million million)
+                        
+
+                else:
+                print("that wasnt an answer and you knew it how dare you i will kill you reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.")
+
+            </code></pre>
+        </div>
+          <nav>
+            <p>Python Code</p>
+            <a href="../index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850.35 850.35">
+                <defs>
+                    <style>
+                    .cls-1 {fill: #83a4d5;}
+                    .cls-2 {fill: #8e86c0;}
+                    </style>
+                </defs>
+                <path class="cls-2" d="M778.93,691.5c6.87,34.8-9.05,70.64-40.36,87.3-.97,.52-1.96,1.02-2.96,1.51-13.46,6.56-27.73,9.55-41.74,9.32-31.33-.51-59-20.17-71.78-48.78-10.45-23.39-24.02-45.59-40.32-66.25-54.02-68.51-137.93-120.19-236.75-142.95-36.15-8.34-74.3-12.8-113.7-12.8-29.81,0-59.44,2.59-88.35,7.67-19.22,3.37-38.13,7.83-56.54,13.36-8.97,2.69-15.26-8.61-8.28-14.85,28.14-25.2,60.68-46.48,96.41-63.28,60.94-28.67,131.13-44.34,204.52-44.34,7.19,0,14.34,.15,21.45,.44,20.08,.85,39.76,2.88,58.96,6.03,164.39,26.71,293.01,133.71,319.45,267.66Z"/>
+                <path class="cls-1" d="M379.07,406.96c-65.37,0-128.3,12.22-184.68,34.82-4.43,1.78-8.73-2.81-6.63-7.1L344.94,112.4c16.05-32.94,49.22-51.97,83.6-51.62,.29-.02,.58-.02,.88-.02,34.07,0,66.78,18.99,82.7,51.64l205.09,420.49c2.61,5.36-4.35,10.19-8.46,5.86-60.25-63.51-147.91-109.19-248.55-125.36-3.93-.63-7.33-3.1-9.08-6.69l-15.92-32.61c-2.72-5.57-10.65-5.56-13.36,0l-12.22,25.07c-2.47,5.07-7.68,8.27-13.32,8.08-5.71-.19-11.45-.29-17.23-.29Z"/>
+                <path class="cls-1" d="M231.32,529.26c33.82,0,66.69,3.35,98.11,9.66,5.54,1.11,8.53,7.18,6.05,12.26l-91.12,186.79c-22.24,45.64-77.28,64.59-122.92,42.32-45.62-22.24-64.57-77.28-42.32-122.92l53.6-109.91c2.89-5.93,8.48-10.1,14.99-11.2,27.39-4.63,55.42-7,83.6-7Z"/>
+                </svg>
+            </a>
+        </nav>
+    </body>
+</html>
