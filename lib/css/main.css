@@ -355,9 +355,9 @@ span{
 	border: none;
     background: url(../../icon/img/clipboard-outline.svg)no-repeat;
 	position: relative;
-	top: -50px;
-	left: 70vw;
-    padding: 25px 50px;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
 	z-index: 3;
 }
 
@@ -395,4 +395,22 @@ span{
 	height: 250%;
 	z-index: -4;
 	background-image: linear-gradient(#4a249d,transparent);
+}
+.bottom_nav_bar
+{
+	position: fixed; 
+	top: 50px;
+	height: fit-content;
+	z-index: 99999;
+	background-color: #4a249d;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 0 0 2em 2em;
+	
+}
+.bottom_nav_bar h1
+{
+	margin: 0 0.5em;
+	line-height: 80px;
+	display: inline-block;
 }
