@@ -28,7 +28,7 @@ body
 	height: 100%;
 	overflow-x: hidden;
 	padding: 50px 0 0 0;
-	background-color: #10002B;
+	background-color: black;
 	color: #fff;
 	
 }
@@ -314,7 +314,7 @@ a
 	width: 100%;
 	height: 80vh;
 	z-index: -4;
-	background-image: linear-gradient(#4a249d,transparent);
+	background-color: black;
 }
 .center 
 {
@@ -386,16 +386,6 @@ span{
 	padding-top: 25px;
 	overflow-x: scroll;
 }
-#cyf_grad
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 250%;
-	z-index: -4;
-	background-image: linear-gradient(#4a249d,transparent);
-}
 .bottom_nav_bar
 {
 	position: fixed; 
@@ -413,4 +403,41 @@ span{
 	margin: 0 0.5em;
 	line-height: 80px;
 	display: inline-block;
+}
+.main_image
+{
+	position: fixed; 
+	display: block;
+	overflow-wrap: normal;
+	top: 50px;
+	z-index: 0;
+	background-color: #4a249d;
+	float: right;
+	right: -255px;
+	transform: translateX(-50%);
+	border-style: solid;
+	border-color: black;
+	border-radius: 0 0 2em 2em;
+}
+.about_me
+{
+	border: none;
+    background: url(../../icon/img/terminal-outline.svg)no-repeat;
+	position: relative;
+	left: 1628px;
+	top: -582px;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	z-index: 9999999999;
+}
+
+.about_me:hover span
+{
+	display: inline-block;
+	position: relative;
+	left:-80px;
+	height: 0em; 
+	width: 10em;   /* modify to needs */
+	
 }
