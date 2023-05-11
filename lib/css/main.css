@@ -412,32 +412,10 @@ span{
 	top: 50px;
 	z-index: 0;
 	background-color: #4a249d;
-	float: right;
-	right: -255px;
+	right: 0%;
 	transform: translateX(-50%);
 	border-style: solid;
 	border-color: black;
 	border-radius: 0 0 2em 2em;
 }
-.about_me
-{
-	border: none;
-    background: url(../../icon/img/terminal-outline.svg)no-repeat;
-	position: relative;
-	left: 1628px;
-	top: -582px;
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	z-index: 9999999999;
-}
 
-.about_me:hover span
-{
-	display: inline-block;
-	position: relative;
-	left:-80px;
-	height: 0em; 
-	width: 10em;   /* modify to needs */
-	
-}
