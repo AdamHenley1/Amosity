@@ -282,6 +282,12 @@ nav
 	background-color: #4a249d;
 	z-index: 10;
 }
+nav button{
+	float:right;
+	position: relative;
+	height:50px;
+	width: 50px;
+}
 nav p
 {
 	position: absolute;
@@ -408,24 +414,28 @@ span{
 {
 	position: fixed; 
 	display: block;
-	overflow-wrap: normal;
+	height: 60%;
 	top: 50px;
 	z-index: 0;
 	background-color: #4a249d;
 	float: right;
 	right: -255px;
-	transform: translateX(-50%);
-	border-style: solid;
-	border-color: black;
+	transform-origin: top;
+	transform: translateX(-50%) translateY(0);
 	border-radius: 0 0 2em 2em;
+	transition: 1s;
+}
+.main_image.slidy
+{
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(-50%) translateY(-80px);
 }
 .about_me
 {
 	border: none;
     background: url(../../icon/img/terminal-outline.svg)no-repeat;
 	position: relative;
-	left: 1628px;
-	top: -582px;
 	display: inline-block;
 	width: 50px;
 	height: 50px;
@@ -441,3 +451,24 @@ span{
 	width: 10em;   /* modify to needs */
 	
 }
+.tp
+{
+	border: none;
+    background: url(../../icon/img/diamond-outline.svg)no-repeat;
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	z-index: 9999999999;
+}
+
+.tp:hover span
+{
+	display: inline-block;
+	position: relative;
+	left:-80px;
+	height: 0em; 
+	width: 10em;   /* modify to needs */
+	
+}
+

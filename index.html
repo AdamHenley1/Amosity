@@ -12,7 +12,7 @@
 	</head>
     <body>
         <div id="grad"></div>
-        <div class = "main_image">
+        <div class = "main_image slidy" id="top_projects">
             <h1 style="display: block; width: 100%; text-align: center;">Top Project</h1>
             <img style="display: block;" src="icon/img/Question mark.png" alt="biggie cheesy taco sbevey">
         </div>
@@ -74,9 +74,10 @@
                 <li><p><a href="icon/img/1.png" target="_blank">temp</a>(Natski made this one)</p></li>
             </ul>
         </div>
-        <button class="about_me" onclick="window.open('about_me.html')"><span class="about_mehover">About me</span></button>
           <nav>
             <p>Home</p>
+            <button class="about_me" onclick="window.open('about_me.html')"><span class="about_mehover">About me</span></button>
+            <button class="tp" onclick="document.getElementById('top_projects').classList.toggle('slidy')"><span class="tphover">Top Project</span></button>
             <a href="index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850.35 850.35">
                 <defs>
