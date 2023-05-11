@@ -28,7 +28,7 @@ body
 	height: 100%;
 	overflow-x: hidden;
 	padding: 50px 0 0 0;
-	background-color: black;
+	background-color: #0A003C;
 	color: #fff;
 	
 }
@@ -282,6 +282,12 @@ nav
 	background-color: #4a249d;
 	z-index: 10;
 }
+nav button{
+	float:right;
+	position: relative;
+	height:50px;
+	width: 50px;
+}
 nav p
 {
 	position: absolute;
@@ -314,7 +320,7 @@ a
 	width: 100%;
 	height: 80vh;
 	z-index: -4;
-	background-color: black;
+	background-color: #0A003C;
 }
 .center 
 {
@@ -408,14 +414,72 @@ span{
 {
 	position: fixed; 
 	display: block;
-	overflow-wrap: normal;
+	height: 60%;
 	top: 50px;
 	z-index: 0;
 	background-color: #4a249d;
+<<<<<<< HEAD
 	right: 0%;
 	transform: translateX(-50%);
 	border-style: solid;
 	border-color: black;
+=======
+	float: right;
+	right: -255px;
+	transform-origin: top;
+	transform: translateX(-50%) translateY(0);
+>>>>>>> fb28a1e2808b00fc96719af3d030333ec27e4991
 	border-radius: 0 0 2em 2em;
+	transition: 1s;
+}
+.main_image.slidy
+{
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(-50%) translateY(-80px);
+}
+<<<<<<< HEAD
+
+=======
+.about_me
+{
+	border: none;
+    background: url(../../icon/img/terminal-outline.svg)no-repeat;
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	z-index: 9999999999;
 }
 
+.about_me:hover span
+{
+	display: inline-block;
+	position: relative;
+	left:-80px;
+	height: 0em; 
+	width: 10em;   /* modify to needs */
+	
+}
+.tp
+{
+	border: none;
+    background: url(../../icon/img/diamond-outline.svg)no-repeat;
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	z-index: 9999999999;
+}
+
+.tp:hover span
+{
+	display: inline-block;
+	position: relative;
+	left:-80px;
+	height: 0em; 
+	width: 10em;   /* modify to needs */
+	
+}
+
+>>>>>>> fb28a1e2808b00fc96719af3d030333ec27e4991
