@@ -418,17 +418,10 @@ span{
 	top: 50px;
 	z-index: 0;
 	background-color: #4a249d;
-<<<<<<< HEAD
-	right: 0%;
-	transform: translateX(-50%);
-	border-style: solid;
-	border-color: black;
-=======
 	float: right;
 	right: -255px;
 	transform-origin: top;
 	transform: translateX(-50%) translateY(0);
->>>>>>> fb28a1e2808b00fc96719af3d030333ec27e4991
 	border-radius: 0 0 2em 2em;
 	transition: 1s;
 }
@@ -438,9 +431,6 @@ span{
 	opacity: 0;
 	transform: translateX(-50%) translateY(-80px);
 }
-<<<<<<< HEAD
-
-=======
 .about_me
 {
 	border: none;
@@ -482,4 +472,3 @@ span{
 	
 }
 
->>>>>>> fb28a1e2808b00fc96719af3d030333ec27e4991
