@@ -28,7 +28,7 @@ body
 	height: 100%;
 	overflow-x: hidden;
 	padding: 50px 0 0 0;
-	background-color: black;
+	background-color: #0A003C;
 	color: #fff;
 	
 }
@@ -314,7 +314,7 @@ a
 	width: 100%;
 	height: 80vh;
 	z-index: -4;
-	background-color: black;
+	background-color: #0A003C;
 }
 .center 
 {
