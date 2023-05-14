@@ -597,12 +597,6 @@ span{
 	text-decoration-color: white;
 	color: white;
 }
-.toggledark
-{
-	background: url(../../icon/img/clipboard-outline-black.svg) ;
-	height: 40px;
-	width: 40px;
-}
 /* Dark mode */
 .Dark-mode{
 	background-color: var(--maindark);
@@ -620,5 +614,7 @@ span{
 .Dark-mode a{
 	color:white;
 }
-
+.Dark-mode .settings_display{
+	background-color: var(--maindark);
+}
 /* End  */  

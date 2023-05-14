@@ -884,18 +884,19 @@ client.run(my_secret)
         </nav>
         <script>
             let checkbox = document.getElementById("darkmode");
-            checkbox.addEventListener( 'change', function() {
-            localStorage.setItem('dark',this.checked);
-            if(this.checked) {
+            console.log(checkbox)
+            checkbox.addEventListener( 'click', function() {
+            if(checkbox.checked) {
+                localStorage.setItem('dark','yes');
                 document.body.classList.add('Dark-mode')
             } else {
+                localStorage.removeItem('dark','yes')
                 document.body.classList.remove('Dark-mode')   
             }
         });
         if(localStorage.getItem('dark')) {
             document.body.classList.add('Dark-mode')
     }
-
 
             </script>
     </body>
