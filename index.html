@@ -10,12 +10,19 @@
         <link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="lib/css/scale.css"/>
 	</head>
     <body>
-        <div id="grad"></div>
         <div class = "main_image slidy" id="top_projects">
             <h1 style="display: block; width: 100%; text-align: center;">Top Project</h1>
             <img style="display: block;" src="icon/img/Question mark.png" alt="biggie cheesy taco sbevey">
         </div>
-        
+        <div class = "settings_display anim" id="settingsid">
+            <div class="settings_box">
+                <h1>Settings</h1>
+                <h2>Toggle dark mode</h2>
+                <label class="switch"><input type="checkbox" />    <div></div>
+                </label>
+                <button class="toggledark" onclick="funmod()"></button>
+            </div>
+        </div>
         <div class="Main-heading">
             <h1><a href="Must_Read.html" style="text-decoration: none;">Coding</a></h1>
         </div>
@@ -115,6 +122,7 @@
         </div>
           <nav>
             <p>Home</p>
+            <button class="settings" onclick="document.getElementById('settingsid').classList.toggle('anim')"><span class="settings_hover">Settings</span></button>
             <button class="about_me" onclick="window.open('about_me.html')"><span class="about_mehover">About me</span></button>
             <button class="tp" onclick="document.getElementById('top_projects').classList.toggle('slidy')"><span class="tphover">Top Project</span></button>
             <a href="index.html">
@@ -131,5 +139,20 @@
                 </svg>
             </a>
         </nav>
+        <script>
+            function funmod() {
+               var element = document.body;
+               element.classList.toggle("Dark-mode");
+               localStorage.setItem("isDark", "yes");
+            }
+            var getsi = localStorage.getItem('isDark')
+            if(getsi){
+                function funmod() {
+               var element = document.body;
+               element.classList.toggle("Dark-mode");
+               localStorage.setItem("isDark", "yes");
+            }
+        }
+            </script>
     </body>
 </html>

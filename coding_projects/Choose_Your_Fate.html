@@ -11,13 +11,21 @@
         <script src="https://natski.netlify.com/lib/js/jquery.js"></script>
 	</head>
     <body>
-        <div id="grad"></div>
+        <div class = "settings_display anim" id="settingsid">
+            <div class="settings_box">
+                <h1>Settings</h1>
+                <h2>Toggle dark mode</h2>
+                <label class="switch"><input type="checkbox" />    <div></div>
+                </label>
+                <button class="toggledark" onclick="funmod()"></button>
+            </div>
+        </div>
         <div class="bottom_nav_bar">
             <h1 style="text-align: center">Choose_Your_Fate.py</h1>
             <button class="programming_button" onclick="navigator.clipboard.writeText(document.getElementById('Choose_Your_Fate').innerText);"><span class="programming_buttonhover">Copy to clipboard</span></button>
         </div>
         <div class="code">
-            <pre><code id="Choose_Your_Fate">
+            <pre><code id="Choose_Your_Fate" style="color: white;">
                 choose = ["pipe 1","pipe 2","pipe 3"]
                 import random
 
@@ -236,6 +244,7 @@
         </div>
           <nav>
             <p>Python Code</p>
+            <button class="settings" onclick="document.getElementById('settingsid').classList.toggle('anim')"><span class="settings_hover">Settings</span></button>
             <button class="about_me" onclick="window.open('../about_me.html')"><span class="about_mehover">About me</span></button>
             <a href="../index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850.35 850.35">
@@ -251,5 +260,19 @@
                 </svg>
             </a>
         </nav>
+        <script>
+            function funmod() {
+               var element = document.body;
+               element.classList.toggle("Dark-mode");
+               document.cookie = "isDark=true";
+            }
+            if(document.cookie= isDark){
+                function funmod() {
+               var element = document.body;
+               element.classList.toggle("Dark-mode");
+               document.cookie = "isDark=true";
+            }
+}
+            </script>
     </body>
 </html>

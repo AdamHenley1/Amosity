@@ -10,6 +10,20 @@
 {
 	--themecol: #4a249d;
 	--accentcol: #4a249d90;
+	--light: #d8dbe0;
+  	--dark: #28292c;
+  	--link: rgb(27, 129, 112);
+  	--link-hover: rgb(24, 94, 82);
+	--mainlight:#b398ec;
+	--secondarylight: #9b4aff;
+	--terciarylight:#e552ff;
+	--fourthlight:#b994ff ;
+	--fithlight: #301aff;
+	--maindark: #0A003C;
+	--secondarydark: #4a249d;
+	--terciarydark:#77068b;
+	--fourthdark:#695196 ;
+	--fithdark: #090058;
 }
 ::-webkit-scrollbar-thumb
 {
@@ -28,8 +42,8 @@ body
 	height: 100%;
 	overflow-x: hidden;
 	padding: 50px 0 0 0;
-	background-color: #0A003C;
-	color: #fff;
+	background-color: var(--mainlight);
+	color: black;
 	
 }
 svg
@@ -279,7 +293,7 @@ nav
 	left: 0;
 	width: 100%;
 	height: 50px;
-	background-color: #4a249d;
+	background-color: var(--secondarylight);
 	z-index: 10;
 }
 nav button{
@@ -298,7 +312,7 @@ nav p
 	left: 0;
 	font-size: 1.2rem;
 	font-weight: bold;
-	color: #fff;
+	color: black;
 	z-index: 10;
 }
 nav a svg
@@ -310,7 +324,7 @@ nav a svg
 
 a
 {
-	color: #fff
+	color: black
 }
 #grad
 {
@@ -359,7 +373,7 @@ span{
 .programming_button
 {
 	border: none;
-    background: url(../../icon/img/clipboard-outline.svg)no-repeat;
+    background: url(../../icon/img/clipboard-outline-white.svg)no-repeat;
 	position: relative;
 	display: inline-block;
 	width: 50px;
@@ -398,7 +412,7 @@ span{
 	top: 50px;
 	height: fit-content;
 	z-index: 99999;
-	background-color: #4a249d;
+	background-color: var(--secondarylight);
 	left: 50%;
 	transform: translateX(-50%);
 	border-radius: 0 0 2em 2em;
@@ -417,7 +431,7 @@ span{
 	height: 600px;
 	top: 50px;
 	z-index: 0;
-	background-color: #4a249d;
+	background-color: var(--secondarylight);
 	float: right;
 	right: -255px;
 	transform-origin: top;
@@ -434,7 +448,7 @@ span{
 .about_me
 {
 	border: none;
-    background: url(../../icon/img/terminal-outline.svg)no-repeat;
+    background: url(../../icon/img/terminal-outline-black.svg)no-repeat;
 	position: relative;
 	display: inline-block;
 	width: 50px;
@@ -446,7 +460,8 @@ span{
 {
 	display: inline-block;
 	position: relative;
-	left:-80px;
+	left: -60px;
+	top:20px;
 	height: 0em; 
 	width: 10em;   /* modify to needs */
 	
@@ -454,7 +469,7 @@ span{
 .tp
 {
 	border: none;
-    background: url(../../icon/img/diamond-outline.svg)no-repeat;
+    background: url(../../icon/img/diamond-outline-black.svg)no-repeat;
 	position: relative;
 	display: inline-block;
 	width: 50px;
@@ -473,3 +488,137 @@ span{
 	
 }
 
+.settings
+{
+	border: none;
+	background: url(../../icon/img/settings-outline-black.svg)no-repeat;
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	left:0px;
+	top:0;
+	z-index: 9999999999;
+}
+.settings:hover span
+{
+	display: inline-block;
+	position: relative;
+	left: -73px;
+	top:20px;
+	height: 0em; 
+	width: 10em;   /* modify to needs */
+}
+.tp:hover span
+{
+	display: inline-block;
+	position: relative;
+	left: -60px;
+	top:20px;
+	height: 0em; 
+	width: 10em;   /* modify to needs */
+	
+}
+.settings_display
+{
+	position: fixed; 
+	display: block;
+	height: 100%;
+	width: 100%;
+	top: 50px;
+	z-index: 9;
+	background-color: var(--mainlight);
+	float: right;
+	right: -50%;
+	transform-origin: top;
+	transform: translateX(-50%) translateY(0);
+	border-radius: 0 0 2em 2em;
+	transition: .25s;
+	text-decoration-color: black;
+	color: black;
+}
+.settings_display.anim
+{
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(-50%) translateY(-80px);
+}
+.display_mode {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	height: 40px;
+	margin: auto;
+	text-align: center;
+  }
+  
+  
+  .switch input {
+	position: absolute;
+	opacity: 0;
+  }
+  
+  .switch {
+	display: inline-block;
+	font-size: 20px; /* 1 */
+	height: 1em;
+	width: 2em;
+	background: gray;
+	border-radius: 1em;
+  }
+  
+  .switch div {
+	height: 1em;
+	width: 1em;
+	border-radius: 1em;
+	background: white;
+	box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+	-webkit-transition: all 300ms;
+	   -moz-transition: all 300ms;
+			transition: all 300ms;
+  }
+  
+  .switch input:checked + div {
+	-webkit-transform: translate3d(100%, 0, 0);
+	   -moz-transform: translate3d(100%, 0, 0);
+			transform: translate3d(100%, 0, 0);
+  }
+.settings_box{
+	background-color: var(--terciarylight);
+	position: fixed; 
+	display: block;
+	height: auto + 10px;
+	top: 40%;
+	left: 45%;
+	z-index: 20;
+	border-radius: 0 0 0 0;
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	text-decoration-color: white;
+	color: white;
+}
+.toggledark
+{
+	background: url(../../icon/img/clipboard-outline-black.svg) ;
+	height: 40px;
+	width: 40px;
+}
+/* Dark mode */
+.Dark-mode{
+	background-color: var(--maindark);
+	color: white;
+}
+.Dark-mode .settings_box{
+	background-color: var(--fithdark);
+}
+.Dark-mode nav{
+	background-color: var(--secondarydark);
+}
+.Dark-mode nav p{
+	color:white;
+}
+.Dark-mode a{
+	color:white;
+}
+
+/* End  */  
