@@ -414,7 +414,7 @@ span{
 {
 	position: fixed; 
 	display: block;
-	height: 60%;
+	height: 600px;
 	top: 50px;
 	z-index: 0;
 	background-color: #4a249d;
