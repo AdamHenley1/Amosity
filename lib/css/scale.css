@@ -15,4 +15,27 @@
 	border-radius: 0 0 2em 2em;
 	transition: 1s;
 }
+.about_me{
+	width: 30px;
+    height: 30px;
+}
+.settings{
+	width: 30px;
+    height: 30px;
+}
+.tp{
+	width: 30px;
+    height: 30px;
+}
+nav{
+    height: 30px;
+    width: 100%;
+}
+nav a svg{
+    margin: 0px 1em;
+    height: 30px;
+}
+nav p{
+    line-height: 30px;
+}
 }
