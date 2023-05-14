@@ -590,6 +590,7 @@ span{
 	height: fit-content;
 	z-index: 99999;
 	background-color: var(--terciarylight);
+	border-radius: 1em 1em 1em 1em;
 	text-align: center;
 	left: 50%;
 	transform: translateX(-50%);
