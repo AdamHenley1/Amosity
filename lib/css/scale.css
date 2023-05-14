@@ -38,4 +38,17 @@ nav a svg{
 nav p{
     line-height: 30px;
 }
+.main_image{
+    top: 30px;
+}
+.settings:hover span{
+    left: -95px;
+	top:20px;
+}
+.bottom_nav_bar{
+    top:30px;
+}
+.settings_display{
+    top: 30px;
+}
 }

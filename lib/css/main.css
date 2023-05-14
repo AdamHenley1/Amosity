@@ -373,7 +373,7 @@ span{
 .programming_button
 {
 	border: none;
-    background: url(../../icon/img/clipboard-outline-white.svg)no-repeat;
+    background: url(../../icon/img/clipboard-outline-black.svg)no-repeat;
 	position: relative;
 	display: inline-block;
 	width: 50px;
@@ -386,6 +386,7 @@ span{
 	display: inline-block;
 	height: 0em; 
 	width: 10em;   /* modify to needs */
+	color: black;
 	
 }
 .code
@@ -508,6 +509,7 @@ span{
 	top:20px;
 	height: 0em; 
 	width: 10em;   /* modify to needs */
+	z-index: 1;
 }
 .tp:hover span
 {
@@ -630,5 +632,11 @@ span{
 }
 .Dark-mode .bottom_nav_bar{
 	background-color: var(--secondarydark);
+}
+.Dark-mode .programming_button{
+	background-image: url(../../icon/img/clipboard-outline-white.svg);
+}
+.Dark-mode .programming_button:hover span{
+	color: white;
 }
 /* End  */  
