@@ -10,7 +10,14 @@
         <script src="https://natski.netlify.com/lib/js/jquery.js"></script>
 	</head>
     <body>
-
+        <div class = "settings_display anim" id="settingsid">
+            <div class="settings_box">
+                <h1>Settings</h1>
+                <h2>Toggle dark mode</h2>
+                <label class="switch"><input type="checkbox" id="darkmode" />    <div></div>
+                </label>
+            </div>
+        </div>
         <div style="position: relative; height: 60vh; width: 100%; display: flex; justify-content: center; align-items: center;">
             <img style="display: block;" src="icon/img/Question mark.png" alt="biggie cheesy taco sbevey">
         </div>
@@ -22,6 +29,7 @@
         <!-- put all of your logs into the changelog folder ( lib / changelog ). logs must follow the naming scheme: log1, log2, log3, ... -->
         <nav>
             <p>Bot's Changelog</p>
+            <button class="settings" onclick="document.getElementById('settingsid').classList.toggle('anim')"><span class="settings_hover">Settings</span></button>
             <button class="about_me" onclick="window.open('about_me.html')"><span class="about_mehover">About me</span></button>
             <a href="index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850.35 850.35">
@@ -37,10 +45,28 @@
                 </svg>
             </a>
         </nav>
+        <script>
+            let checkbox = document.getElementById("darkmode");
+            console.log(checkbox)
+            checkbox.addEventListener( 'click', function() {
+            if(checkbox.checked) {
+                localStorage.setItem('dark','yes');
+                document.body.classList.add('Dark-mode')
+            } else {
+                localStorage.removeItem('dark','yes')
+                document.body.classList.remove('Dark-mode')   
+            }
+        });
+        if(localStorage.getItem('dark')) {
+            document.body.classList.add('Dark-mode')
+    }
+            </script>
     </body>
+    
     <script src="https://natski.netlify.com/lib/js/ENCORE_CLS.js"></script>
     <script>
         var path = 'https://amosity.net/lib/changelog/log', filecount = 5; /* file count should match the amout of changelog files */
         clsStart()
     </script>
+    
 </html>

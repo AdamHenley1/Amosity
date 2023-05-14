@@ -9,13 +9,21 @@
         <link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="lib/css/scale.css"/>
 	</head>
     <body>
-
+        <div class = "settings_display anim" id="settingsid">
+            <div class="settings_box">
+                <h1>Settings</h1>
+                <h2>Toggle dark mode</h2>
+                <label class="switch"><input type="checkbox" id="darkmode" />    <div></div>
+                </label>
+            </div>
+        </div>
         <h2>Credits</h2>
         <ul>
             <li><p>all credits goes to <a href="https://natski.netlify.com" target="_blank">natski</a></p></li>
           </ul>
         <nav>
             <p>Credits</p>
+            <button class="settings" onclick="document.getElementById('settingsid').classList.toggle('anim')"><span class="settings_hover">Settings</span></button>
             <button class="about_me" onclick="window.open('about_me.html')"><span class="about_mehover">About me</span></button>
             <a href="index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850.35 850.35">
@@ -31,5 +39,21 @@
                 </svg>
             </a>
         </nav>
+        <script>
+            let checkbox = document.getElementById("darkmode");
+            console.log(checkbox)
+            checkbox.addEventListener( 'click', function() {
+            if(checkbox.checked) {
+                localStorage.setItem('dark','yes');
+                document.body.classList.add('Dark-mode')
+            } else {
+                localStorage.removeItem('dark','yes')
+                document.body.classList.remove('Dark-mode')   
+            }
+        });
+        if(localStorage.getItem('dark')) {
+            document.body.classList.add('Dark-mode')
+    }
+            </script>
     </body>
 </html>
