@@ -18,9 +18,8 @@
             <div class="settings_box">
                 <h1>Settings</h1>
                 <h2>Toggle dark mode</h2>
-                <label class="switch"><input type="checkbox" />    <div></div>
+                <label class="switch"><input type="checkbox" id="darkmode"/>    <div></div>
                 </label>
-                <button class="toggledark" onclick="funmod()"></button>
             </div>
         </div>
         <div class="Main-heading">
@@ -140,19 +139,20 @@
             </a>
         </nav>
         <script>
-            function funmod() {
-               var element = document.body;
-               element.classList.toggle("Dark-mode");
-               localStorage.setItem("isDark", "yes");
+            let checkbox = document.getElementById("darkmode");
+            console.log(checkbox)
+            checkbox.addEventListener( 'click', function() {
+            if(checkbox.checked) {
+                localStorage.setItem('dark','yes');
+                document.body.classList.add('Dark-mode')
+            } else {
+                localStorage.removeItem('dark','yes')
+                document.body.classList.remove('Dark-mode')   
             }
-            var getsi = localStorage.getItem('isDark')
-            if(getsi){
-                function funmod() {
-               var element = document.body;
-               element.classList.toggle("Dark-mode");
-               localStorage.setItem("isDark", "yes");
-            }
-        }
+        });
+        if(localStorage.getItem('dark')) {
+            document.body.classList.add('Dark-mode')
+    }
             </script>
     </body>
 </html>

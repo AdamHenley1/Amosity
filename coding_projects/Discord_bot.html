@@ -15,9 +15,8 @@
             <div class="settings_box">
                 <h1>Settings</h1>
                 <h2>Toggle dark mode</h2>
-                <label class="switch"><input type="checkbox" />    <div></div>
+                <label class="switch"><input type="checkbox" id="darkmode" />    <div></div>
                 </label>
-                <button class="toggledark" onclick="funmod()"></button>
             </div>
         </div>
         <div class="bottom_nav_bar">
@@ -884,18 +883,20 @@ client.run(my_secret)
             </a>
         </nav>
         <script>
-            function funmod() {
-               var element = document.body;
-               element.classList.toggle("Dark-mode");
-               document.cookie = "isDark=true";
+            let checkbox = document.getElementById("darkmode");
+            checkbox.addEventListener( 'change', function() {
+            localStorage.setItem('dark',this.checked);
+            if(this.checked) {
+                document.body.classList.add('Dark-mode')
+            } else {
+                document.body.classList.remove('Dark-mode')   
             }
-            if(document.cookie = isDark){
-                function funmod() {
-               var element = document.body;
-               element.classList.toggle("Dark-mode");
-               document.cookie = "isDark=true";
-            }
-}
+        });
+        if(localStorage.getItem('dark')) {
+            document.body.classList.add('Dark-mode')
+    }
+
+
             </script>
     </body>
 </html>
