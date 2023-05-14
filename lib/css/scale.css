@@ -1,2 +1,17 @@
 @media (orientation: portrait) {
+    .main_image
+{
+	position: fixed; 
+	display: block;
+	height: 60%;
+	top: 50px;
+	z-index: 999999;
+	background-color: #4a249d;
+	float: right;
+	right: -255px;
+	transform-origin: top;
+	transform: translateX(-50%) translateY(0);
+	border-radius: 0 0 2em 2em;
+	transition: 1s;
+}
 }
