@@ -466,7 +466,8 @@ span{
 {
 	display: inline-block;
 	position: relative;
-	left:-80px;
+	left: -60px;
+	top:20px;
 	height: 0em; 
 	width: 10em;   /* modify to needs */
 	

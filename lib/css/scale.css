@@ -5,6 +5,7 @@
 	display: block;
 	height: 60%;
 	top: 50px;
+    scale: .5;
 	z-index: 999999;
 	background-color: #4a249d;
 	float: right;
