@@ -583,17 +583,14 @@ span{
 			transform: translate3d(100%, 0, 0);
   }
 .settings_box{
-	background-color: var(--terciarylight);
 	position: fixed; 
-	display: block;
-	height: auto + 10px;
-	top: 40%;
-	left: 45%;
-	z-index: 20;
-	border-radius: 1em 1em 1em 1em;
-	margin-left: auto;
-    margin-right: auto;
+	top: 150px;
+	height: fit-content;
+	z-index: 99999;
+	background-color: var(--terciarylight);
 	text-align: center;
+	left: 50%;
+	transform: translateX(-50%);
 	text-decoration-color: black;
 	color: black;
 }
@@ -630,5 +627,8 @@ span{
 }
 .Dark-mode .tp{
 	background-image: url(../../icon/img/diamond-outline-white.svg);
+}
+.Dark-mode .bottom_nav_bar{
+	background-color: var(--secondarydark);
 }
 /* End  */  
