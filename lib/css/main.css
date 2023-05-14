@@ -594,8 +594,8 @@ span{
 	margin-left: auto;
     margin-right: auto;
 	text-align: center;
-	text-decoration-color: white;
-	color: white;
+	text-decoration-color: black;
+	color: black;
 }
 /* Dark mode */
 .Dark-mode{
@@ -604,6 +604,8 @@ span{
 }
 .Dark-mode .settings_box{
 	background-color: var(--fithdark);
+	text-decoration-color: white;
+	color: white;
 }
 .Dark-mode nav{
 	background-color: var(--secondarydark);
@@ -616,5 +618,17 @@ span{
 }
 .Dark-mode .settings_display{
 	background-color: var(--maindark);
+}
+.Dark-mode .main_image{
+	background-color: var(--secondarydark);
+}
+.Dark-mode .about_me{
+	background-image: url(../../icon/img/terminal-outline-white.svg);
+}
+.Dark-mode .settings{
+	background-image: url(../../icon/img/settings-outline-white.svg);
+}
+.Dark-mode .tp{
+	background-image: url(../../icon/img/diamond-outline-white.svg);
 }
 /* End  */  
