@@ -143,10 +143,10 @@
             console.log(checkbox)
             checkbox.addEventListener( 'click', function() {
             if(checkbox.checked) {
-                localStorage.setItem('dark','yes');
+                localStorage.setItem('dark','true');
                 document.body.classList.add('Dark-mode')
             } else {
-                localStorage.removeItem('dark','yes')
+                localStorage.removeItem('dark','true')
                 document.body.classList.remove('Dark-mode')   
             }
         });
