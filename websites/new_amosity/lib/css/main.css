@@ -87,10 +87,10 @@ body
 	position: absolute;
 	display: flex;
 	object-fit: fill;
-	height: 750px;
-	width: 1250px;
-	left: 0%;
-	top: 0%;
+	height: 100%;
+	width: 100%;
+	left: 520%;
+	top: 50%;
 	z-index: 0;
 }
 .contain-text
@@ -104,6 +104,8 @@ body
 	background-color: #393939c9;
 	border-radius: 0.5em 0.5em 0.5em 0.5em;
 	padding: 20px;
+	left: 10%;
+	top: 50%;
 	margin-top: auto;
 	margin-left: auto;
 	margin-bottom: auto;
