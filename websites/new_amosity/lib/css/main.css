@@ -31,8 +31,10 @@ body
 	height: 100%;
 	width: 100%;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	padding: 20px 0 0 0;
 	background-image: linear-gradient(rgb(49, 0, 83), black);
+	background-repeat: no-repeat;
 	color: black;
 	
 }
@@ -90,7 +92,9 @@ a
 {
 	color: black
 }
-
+nav button svg {
+	height: 30px;
+  }
 .pbox
 {
 	color: white;
@@ -101,4 +105,42 @@ a
 	z-index: 9;
 	text-align: center;
 	border-radius: 1em;
+}
+.old_website
+{
+	position: relative;
+	height: 40px;
+	width: 40px;
+	margin: 0 5px;
+	padding: 5px;
+	float: right;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	transition: 0.2s;
+  }
+.old_website::before{
+	content: "Old Wevsite";
+	text-decoration: none;
+	background-color:black;
+	color: white;
+	font-weight: bold;
+	padding: 8px 10px 10px 10px;
+	position: absolute;
+	top: 50px;
+	left: -123px;
+	pointer-events: none;
+	border-radius: 10px;
+	opacity: 0;
+	transform: translateY(20px);
+	visibility: hidden;
+	z-index: 9999;
+	transition: 0.2s;
+  }
+
+.old_website:hover::before {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
 }
