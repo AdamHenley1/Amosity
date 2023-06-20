@@ -10,37 +10,21 @@
         <link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="lib/css/scale.css"/>
 	</head>
     <body>
-        <div id="SSC">
-            <div class="banner-bg"> <!-- duplicate this element for the amount of pages you want -->
-                <a class="banner-button" href="404.html">enter</a>
-                <img class="banner-img" src="../new_amosity/icon/slide_image/temp.png">
-                <div class="contain-text">
+        <div id="SSC" style="opacity: 0; display: none;">
+
+            <div class="banner-bg"> <!-- duplicate 'banner-bg' for the amount of pages you want -->
+        
+                <img src="../new_amosity/icon/slide_image/temp.png" draggable="false" alt="" loading="eager">
+        
+                <a class="banner-button" href="/404.html">enter</a>
+        
+                    <div class="contain-text">
                     <h1 class="heading">Temp</h1>
                     <p class="main-text">This is a temporary parapgraph</p>
                 </div>
-            </div>
-            <div class="banner-bg"> <!-- duplicate this element for the amount of pages you want -->
-        
-                <a class="banner-button" href="404.html">enter</a>
-                <img class="banner-img" src="../new_amosity/icon/slide_image/temp.png">
-                <div class="contain-text">
-                    <h1 class="heading">Temp</h1>
-                    <p class="main-text">This is a temporarssssy parapgraph</p>
-                </div>
         
             </div>
-            <div class="banner-bg"> <!-- duplicate this element for the amount of pages you want -->
-        
-                <a class="banner-button" href="404.html">enter</a>
-                <img class="banner-img" src="../new_amosity/icon/slide_image/temp.png">
-                <div class="contain-text">
-                    <h1 class="heading">Temp</h1>
-                    <p class="main-text">This is a parapgraph</p>
-                </div>
-        
-            </div>
-        
-        </div>     
+        </div>
         <nav>
             <p>Home</p>
             <a href="index.html">
@@ -58,6 +42,15 @@
             </a>
         </nav>
     </body>
-    <script src="https://natski.netlify.com/lib/js/ENCORE_SSC.js"></script>
-    <script>SSC_settings={'thumbs':true,'progressBar':true,'sideButtons':true,'timer':5000}</script>
+    <script src="https://natski.netlify.app/lib/js/ENCORE_SSC.js"></script>
+    <script>
+        SSC_settings={
+            'thumbs':true,
+            'progressBar':true,
+            'sideButtons':true,
+            'timer':10000,
+            'style':1
+        }
+    </script>
+
 </html>
