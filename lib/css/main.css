@@ -55,12 +55,12 @@ nav button{
 nav p
 {
 	position: absolute;
-	width: 50%;
+	width: fit-content;
 	line-height: 50px;
-	text-align: center;
+	text-align:right;
 	top: 0;
-	left: 25%;
-	font-size: 1.2rem;
+	left: 4.3%;
+	font-size: 20px;
 	font-weight: bold;
 	color: white;
 	z-index: 10;
