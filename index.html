@@ -4,136 +4,49 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, user-scalable=no"/>
         <meta name="description" content="My own personal website for fun because Yesn't = Big cheesy tender chicken wings">
-        <link rel="icon" type="image/x-icon" href="icon/img/1.png">
+        <link rel="icon" type="image/x-icon" href="/icon/img/1.png">
         <link rel="stylesheet" type="text/css" href="lib/css/main.css"/>
         <link rel="stylesheet" type="text/css" href="lib/css/animation.css"/>
         <link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="lib/css/scale.css"/>
 	</head>
     <body>
-        <div class = "main_image slidy" id="top_projects">
-            <h1 style="display: block; width: 100%; text-align: center;">Top Project</h1>
-            <img style="display: block;" src="icon/img/DP1.png" alt="biggie cheesy taco sbevey">
-        </div>
-        <div class = "settings_display anim" id="settingsid">
-            <div class="settings_box">
-                <h1>Settings</h1>
-                <h2>Toggle dark mode</h2>
-                <label class="switch"><input type="checkbox" id="darkmode"/>    <div></div>
-                </label>
+        <div id="SSC" style="opacity: 0; display: none;">
+            <div class="banner-bg"> <!-- duplicate 'banner-bg' for the amount of pages you want -->
+        
+                <img src="/icon/slide_image/bt.png" draggable="false" alt="" loading="eager">
+        
+                <a class="banner-button" href="../new_amosity/404.html">enter</a>
+        
+                <div class="pbox">
+                    <h1>Coding</h1>
+                    <p>My portfolio of coding in various languages</p>
+                </div>
             </div>
+            <div class="banner-bg"> <!-- duplicate 'banner-bg' for the amount of pages you want -->
+        
+                <img src="/icon/slide_image/bt.png" draggable="false" alt="" loading="eager">
+        
+                <a class="banner-button" href="../new_amosity/404.html">enter</a>
+                <div class="pbox">
+                    <h1>Art</h1>
+                    <p>My tiny art portfolio</p>
+                </div>
+            </div>
+            <style>
+                .banner-button{
+                    font-size: 30px;
+                    transform: translate(0px, 40px);
+                }
+            </style>
         </div>
-        <div class="Main-heading">
-            <h1><a href="Must_Read.html" style="text-decoration: none;">Coding</a></h1>
-        </div>
-
-        <div class="Sub-heading">
-            <h2>Python Projects</h2>
-        </div>
-
-        <div class="Main-text">
-            <ul>
-                <li><p>My own discord bot</p><a href="coding_projects/Discord_bot.html">Main.py</a><p></p><a href="https://replit.com/@Adam-Henley/Amosity-bot?v=1#main.py" target="_blank">replit</a><p></p><a href="Bot's_Changelog.html">changelog</a></li>
-                <li><p>Choose_Your_Fate</p><a href="coding_projects/Choose_Your_Fate.html">Code</a></li>
-            </ul>
-        </div>    
-
-        <div class="Sub-heading">
-            <h2>LISP Projects</h2>
-        </div>
-
-        <div class="Main-text">
-            <ul>
-                <li><a href="404.html">temp</a></li>
-            </ul>
-        </div>   
-
-        <div class="Sub-heading">
-            <h2>C Projects</h2>
-        </div>
-
-        <div class="Main-text">
-            <ul>
-                <li><a href="404.html">temp</a></li>
-            </ul>
-        </div>  
-
-        <div class="Sub-heading">
-            <h2>IOS App Projects</h2>
-        </div>
-
-        <div class="Main-text">
-            <ul>
-                <li><a href="">Project 1</a></li>
-            </ul>
-        </div>  
-
-        <div class="Sub-heading">
-            <h2>Perl Projects</h2>
-        </div>
-
-        <div class="Main-text">
-            <ul>
-                <li><a href="404.html">temp</a></li>
-            </ul>
-        </div>  
-
-        <div class="Sub-heading">
-            <h2>Javascript Projects</h2>
-        </div>
-
-        <div class="Main-text">
-            <ul>
-                <li><a href="404.html">temp</a></li>
-            </ul>
-        </div>  
-
-        <div class="Sub-heading">
-            <h2>OS Projects</h2>
-        </div>
-
-        <div class="Main-text">
-            <ul>
-                <li><p>Abib-os (very long term)</p><a href="404.html">Code</a></li>
-                <li><p>Mushroom OS (A colaboration with Cameron)</p><a href="404.html">website</a></li>
-            </ul>
-        </div>
-
-        <div class="Sub-heading">
-            <h2>Websites</h2>
-        </div>
-
-        <div class="Main-text">
-            <ul>
-                <li><p><a href="../websites/new_amosity/index.html">new website</a></p></li>
-            </ul>
-        </div>
-
-        <h1>Art</h1>
-
-        <div class="Sub-heading">
-            <h2>Blender Projects</h2>
-        </div>
-
-        <div class="Main-text">
-            <ul>
-                <li><p><a href="404.html">temp</a></p></li>
-            </ul>
-        </div>
-
-        <div class="Sub-heading">
-            <h2>Digital Art Projects</h2>
-        </div>
-
-        <div class="Main-text">
-            <ul>
-                <li><p><a href="icon/img/DP1.png" target="_blank">App Background</a> My first actual digital art project made to be as a background of my app</p></li>
-            </ul>
-        </div>
-          <nav>
-            <p>Home</p>
-            <button class="settings" onclick="document.getElementById('settingsid').classList.toggle('anim')"><span class="settings_hover">Settings</span></button>
-            <button class="about_me" onclick="window.open('about_me.html')"><span class="about_mehover">About me</span></button>
-            <button class="tp" onclick="document.getElementById('top_projects').classList.toggle('slidy')"><span class="tphover">Top Project</span></button>
+        
+        <nav>
+            <p style="font-weight: bold; font-size: 30px; font-family: Arial, Helvetica, sans-serif;">Home</p>
+            <button class="old_website" onclick="window.open('websites/Old_Amosity/index.html')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1032.47 1032.53">
+                    <path d="M952.08,620.24l-57.1-32.97c-25.19-14.54-40.47-41.49-40.43-70.58,0-.16,0-.31,0-.47s0-.31,0-.47c-.04-29.09,15.24-56.04,40.43-70.58l57.1-32.97c41.44-23.93,55.64-76.92,31.72-118.36l-41.28-71.49c-23.92-41.44-76.92-55.64-118.36-31.72l-57.05,32.94c-25.23,14.57-56.25,14.28-81.44-.34-.28-.16-.56-.33-.85-.49-25.16-14.5-40.81-41.2-40.81-70.24V86.64c0-47.85-38.79-86.64-86.65-86.64h-82.54c-47.86,0-86.65,38.79-86.65,86.64v65.87c0,29.04-15.65,55.74-40.81,70.24-.28,.16-.57,.33-.85,.49-25.2,14.62-56.22,14.9-81.44,.34l-57.05-32.94c-41.44-23.92-94.44-9.72-118.37,31.72l-41.27,71.49c-23.93,41.44-9.73,94.43,31.72,118.36l57.1,32.97c25.19,14.54,40.47,41.49,40.43,70.58,0,.16,0,.31,0,.47s0,.31,0,.47c.04,29.09-15.24,56.04-40.43,70.58l-57.1,32.97c-41.45,23.93-55.65,76.92-31.72,118.36l41.27,71.49c23.93,41.44,76.93,55.64,118.37,31.72l57.05-32.94c25.23-14.57,56.25-14.28,81.44,.34,.28,.16,.56,.33,.85,.49,25.16,14.5,40.81,41.2,40.81,70.24v65.86c0,47.86,38.79,86.65,86.65,86.65h82.54c47.86,0,86.65-38.79,86.65-86.65v-65.86c0-29.04,15.65-55.74,40.81-70.24,.28-.16,.57-.33,.85-.49,25.2-14.62,56.22-14.9,81.44-.34l57.05,32.94c41.44,23.92,94.44,9.72,118.36-31.72l41.28-71.49c23.92-41.44,9.72-94.43-31.72-118.36Zm-401.72,63.49c-11.07,2.25-22.53,3.43-34.27,3.43s-23.2-1.18-34.27-3.43c-36.94-7.52-69.55-26.96-93.65-54.11-15.14-17.08-26.91-37.2-34.28-59.33-5.66-16.99-8.73-35.17-8.73-54.06s3.07-37.07,8.73-54.06c7.37-22.13,19.14-42.25,34.28-59.33,24.1-27.15,56.71-46.59,93.65-54.11,11.07-2.25,22.53-3.43,34.27-3.43s23.2,1.18,34.27,3.43c36.94,7.52,69.55,26.96,93.65,54.11,15.14,17.08,26.91,37.2,34.28,59.33,5.66,16.99,8.73,35.17,8.73,54.06s-3.07,37.07-8.73,54.06c-7.37,22.13-19.14,42.25-34.28,59.33-24.1,27.15-56.71,46.59-93.65,54.11Z"></path>
+                </svg>
+            </button>
             <a href="index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850.35 850.35">
                 <defs>
@@ -148,21 +61,16 @@
                 </svg>
             </a>
         </nav>
-        <script>
-            let checkbox = document.getElementById("darkmode");
-            console.log(checkbox)
-            checkbox.addEventListener( 'click', function() {
-            if(checkbox.checked) {
-                localStorage.setItem('dark','true');
-                document.body.classList.add('Dark-mode')
-            } else {
-                localStorage.removeItem('dark','true')
-                document.body.classList.remove('Dark-mode')   
-            }
-        });
-        if(localStorage.getItem('dark')) {
-            document.body.classList.add('Dark-mode')
-    }
-            </script>
     </body>
+    <script src="https://natski.netlify.app/lib/js/ENCORE_SSC.js"></script>
+    <script>
+        SSC_settings={
+            'thumbs':false,
+            'progressBar':true,
+            'sideButtons':true,
+            'timer':10000,
+            'style':1
+        }
+    </script>
+
 </html>

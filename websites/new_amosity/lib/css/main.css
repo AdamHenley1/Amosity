@@ -9,22 +9,11 @@
 }
 :root 
 {
-	--themecol: #4a249d;
-	--accentcol: #4a249d90;
-	--light: #d8dbe0;
-  	--dark: #28292c;
+	--navbar-colour: rgba(0, 0, 0, 0.3);
+	--shadow: rgb(9, 9, 9);
   	--link: rgb(27, 129, 112);
   	--link-hover: rgb(24, 94, 82);
-	--mainlight:#b398ec;
-	--secondarylight: #9b4aff;
-	--terciarylight:#e552ff;
-	--fourthlight:#b994ff ;
-	--fithlight: #301aff;
-	--maindark: #0A003C;
-	--secondarydark: #4a249d;
-	--terciarydark:#77068b;
-	--fourthdark:#695196 ;
-	--fithdark: #090058;
+	--text-light: rgb(209, 209, 209);
 }
 body
 {
@@ -33,7 +22,7 @@ body
 	overflow-x: hidden;
 	overflow-y: hidden;
 	padding: 20px 0 0 0;
-	background-image: linear-gradient(rgb(49, 0, 83), black);
+	background-image: linear-gradient(rgb(154, 110, 255), black);
 	background-repeat: no-repeat;
 	color: black;
 	
@@ -55,12 +44,7 @@ nav
 	width: 100%;
 	height: 50px;
 	z-index: 10;
-    background: rgba(117, 117, 117, 0.2);
-    backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-    color: #000000;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 80px rgba(0, 0, 0, 0.5);
+    background-color: #00000060;
 }
 nav button{
 	float:right;
@@ -97,7 +81,7 @@ nav button svg {
   }
 .pbox
 {
-	color: white;
+	color: var(--text-light);
 	padding: 15px;
 	background: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(8px);
@@ -116,6 +100,8 @@ nav button svg {
 	margin: 0 5px;
 	padding: 5px;
 	float: right;
+	right: 10px;
+	top: 2px;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -129,18 +115,26 @@ nav button svg {
 	content: "Old Website";
 	text-decoration: none;
 	background-color:rgba(0, 0, 0, 0.6);
-	color: white;
+	color: var(--text-light);
 	font-weight: bold;
 	padding: 8px 10px 10px 10px;
 	position: absolute;
-	top: 100px;
-	left: -123px;
+	top: 66px;
+	left: -10px;
 	pointer-events: none;
 	border-radius: 10px;
 	transform: translateY(-20px);
 	z-index: 9999;
 	transition: 10s;
+	animation-name: btext;
+	animation-duration: 0.2s;
 }
+@keyframes btext {
+	from {transform: translateY(0px);
+	opacity: 0;}
+	to {transform: translateY(-20px);
+	opacity: 1;}
+  }
 .sping svg{
 	position: relative;
 	background:transparent;
