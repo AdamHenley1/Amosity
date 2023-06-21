@@ -100,7 +100,7 @@ nav button svg {
 	margin: 0 5px;
 	padding: 5px;
 	float: right;
-	right: 10px;
+	left: -17px;
 	top: 2px;
 	display: inline-flex;
 	justify-content: center;
@@ -108,33 +108,33 @@ nav button svg {
 	border-radius: 5px;
 	transition: 0.2s;
 	fill: white;
+	border: hidden;
 
   }
-.old_website:hover::after{
-	font-size: 10px;
+.old_website::after{
+	font-size: 12px;
+	white-space: nowrap;
 	content: "Old Website";
 	text-decoration: none;
-	background-color:rgba(0, 0, 0, 0.6);
+	background-color:rgba(0, 0, 0, 0.804);
 	color: var(--text-light);
 	font-weight: bold;
 	padding: 8px 10px 10px 10px;
 	position: absolute;
 	top: 66px;
-	left: -10px;
+	left: -25px;
 	pointer-events: none;
 	border-radius: 10px;
-	transform: translateY(-20px);
 	z-index: 9999;
-	transition: 10s;
-	animation-name: btext;
-	animation-duration: 0.2s;
+	opacity: 0;
+	visibility: hidden;
 }
-@keyframes btext {
-	from {transform: translateY(0px);
-	opacity: 0;}
-	to {transform: translateY(-20px);
-	opacity: 1;}
-  }
+.old_website:hover::after{
+	transform: translateY(-6px);
+	opacity: 1;
+	visibility: visible;
+	transition: 0.3s;
+}
 .sping svg{
 	position: relative;
 	background:transparent;
