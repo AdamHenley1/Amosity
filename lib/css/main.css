@@ -22,7 +22,7 @@ body
 	overflow-x: hidden;
 	overflow-y: hidden;
 	padding: 20px 0 0 0;
-	background-image: linear-gradient(rgb(154, 110, 255), black);
+	background-image: linear-gradient(black,rgb(74, 33, 170));
 	background-repeat: no-repeat;
 	color: black;
 	
