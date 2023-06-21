@@ -1,0 +1,9 @@
+@keyframes fadein{
+    from{transform: translateY(-70px); opacity: 0.4;}
+    to{transform: translateY(0); opacity: 1;}
+}
+
+@keyframes socialfadein{
+    from{transform: scale(0.8); opacity: 0;}
+    to{transform: scale(1); opacity: 1;}
+}

@@ -1,0 +1,54 @@
+@media (orientation: portrait) {
+    .main_image
+{
+	position: fixed; 
+	display: block;
+	height: 600px;
+	top: 49px;
+    scale: .5;
+	z-index: 999999;
+	background-color: #4a249d;
+	float: right;
+	right: -256px;
+	transform-origin: top;
+	transform: translateX(-50%) translateY(0);
+	border-radius: 0 0 2em 2em;
+	transition: 1s;
+}
+.about_me{
+	width: 30px;
+    height: 30px;
+}
+.settings{
+	width: 30px;
+    height: 30px;
+}
+.tp{
+	width: 30px;
+    height: 30px;
+}
+nav{
+    height: 30px;
+    width: 100%;
+}
+nav a svg{
+    margin: 0px 1em;
+    height: 30px;
+}
+nav p{
+    line-height: 30px;
+}
+.main_image{
+    top: 30px;
+}
+.settings:hover span{
+    left: -95px;
+	top:20px;
+}
+.bottom_nav_bar{
+    top:30px;
+}
+.settings_display{
+    top: 30px;
+}
+}
