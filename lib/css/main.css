@@ -1,28 +1,48 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *
 {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Roboto';
-	font-size: 22px;
+	font-family: 'Exo 2', sans-serif;
 }
 :root 
 {
 	--navbar-colour: rgba(0, 0, 0, 0.3);
+	--navsvg: #e9e9e9;
 	--shadow: rgb(9, 9, 9);
   	--link: rgb(27, 129, 112);
   	--link-hover: rgb(24, 94, 82);
 	--text-light: rgb(209, 209, 209);
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: var(--displaycolour);
+    border: 2px solid var(--accentcol);
+    border-radius: 100vmax;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    border: 2px solid var(--displaycolour);
+}
+::-webkit-scrollbar
+{
+    width: 0px;
+	height: 0px;
+    background-color: var(--accentcol);
+}
+.itemContainer::-webkit-scrollbar,.itemContainer div p::-webkit-scrollbar
+{
+    width: 0;
 }
 body
 {
 	height: 100%;
 	width: 100%;
 	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow-y: scroll;
 	padding: 20px 0 0 0;
-	background-image: linear-gradient(to left top,black, rgb(49, 0, 90));
+	background-image: linear-gradient(to left top,black, rgb(36, 0, 65));
 	background-repeat: no-repeat;
 	color: black;
 	
@@ -43,8 +63,9 @@ nav
 	left: 0;
 	width: 100%;
 	height: 50px;
-	z-index: 10;
-    background-color: #00000080;
+	padding: 5px 20px;
+	background-color: #282828c7;
+
 }
 nav button{
 	float:right;
@@ -52,29 +73,87 @@ nav button{
 	height:50px;
 	width: 50px;
 }
-nav p
+nav span
 {
 	position: absolute;
 	width: fit-content;
-	line-height: 50px;
-	text-align:right;
-	top: 0;
-	left: 4.3%;
-	font-size: 20px;
+	line-height: 40px;
 	font-weight: bold;
-	color: white;
+	color: var(--navsvg);
 	z-index: 10;
+	box-sizing: border-box;
+	font-family: 'Exo 2', sans-serif;
+	margin: 0 5px;
+	opacity: 1;
+	transition: 0.2s;
 }
 nav a svg
 {
-	margin: 5px 1em;
-	height: 40px;
-	z-index: 10;
+	position: relative;
+	top: -5px;
+	right: 6px;
+	height: 48px;
+	width: 50px;
+	margin: 0 5px;
+	padding: 5px;
+	float: left;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	transition: 0.2s;
+	z-index: 20;
 }
+.indexlogo::before{
+	font-size: 15px;
+	font-weight: bold;
+	white-space: nowrap;
+	content: "AMOSITY";
+	text-decoration: none;
+	background-color:rgb(0, 0, 0);
+	color: var(--text-light);
+	position: absolute;
+	top: 0px;
+	left: 50px;
+	pointer-events: none;
+	border-radius: 0px;
+	z-index: 9999;
+	opacity: 0;
+	visibility: hidden;
+	padding: 15px 10px 17px 10px;
+	z-index: 20;
+	transition: 140ms;
+	transition-timing-function: ease-out;
+}
+.indexlogo:hover::before{
+	transform: translateX(21px);
+	opacity: 1;
+	visibility: visible;
+	border-left: #e9e9e9;
+	z-index: 20;
+}
+.indexlogo::after{
+	flex: 1;
+	content: '';
+	padding: 2px;
+	background-color: rgb(106, 106, 106);
+	margin: -14px;
+	border-radius: 2em;
+	font-size: 38px;
+	position: relative;
+	top: -3px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 21;
+	transition-timing-function: ease-out;
+	transition: 20ms;
+}
+.indexlogo::after > .indexlogo::before{}
 
-a
-{
-	color: black
+.indexlogo:hover::after{
+	opacity: 1;
+	visibility: visible;
+	z-index: 21;
 }
 nav button svg {
 	height: 30px;
@@ -95,19 +174,18 @@ nav button svg {
 	position: relative;
 	background:transparent;
 	border-color: transparent;
-	height: 40px;
-	width: 40px;
-	margin: 0 5px;
+	height: 38px;
+	width: 38px;
 	padding: 5px;
 	float: right;
-	left: -17px;
-	top: 2px;
+	left: 0px;
+	top: 1px;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
 	transition: 0.2s;
-	fill: white;
+	fill: var(--navsvg);
 	border: hidden;
 
   }
@@ -116,25 +194,27 @@ nav button svg {
 	white-space: nowrap;
 	content: "Old Website";
 	text-decoration: none;
-	background-color:rgba(0, 0, 0, 0.804);
+	background-color:#101010;
 	color: var(--text-light);
 	font-weight: bold;
-	padding: 8px 10px 10px 10px;
+	padding: 5px 5px 5px 5px;
 	position: absolute;
-	top: 66px;
-	left: -25px;
+	top: 90px;
+	left: -23px;
 	pointer-events: none;
-	border-radius: 10px;
+	border-radius: 2px;
 	z-index: 9999;
 	opacity: 0;
 	visibility: hidden;
+	transition: 150ms;
+	transition-timing-function: ease-out;
 }
 .old_website:hover::after{
-	transform: translateY(-6px);
+	transform: translateY(-40px);
 	opacity: 1;
 	visibility: visible;
-	transition: 0.3s;
 }
+
 .sping svg{
 	position: relative;
 	background:transparent;
