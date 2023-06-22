@@ -189,6 +189,22 @@ nav button svg {
 	border: hidden;
 
   }
+.old_website:hover{
+	background-color: #00000045;
+	animation-name: myanim;
+	animation-duration: infinite;
+	animation-direction: normal;
+}
+@keyframes myanim {
+	from {
+		transform: rotate(0deg);
+	}
+  
+	to {
+		transform: rotate(360deg);
+	}
+}
+  
 .old_website::after{
 	font-size: 12px;
 	white-space: nowrap;
