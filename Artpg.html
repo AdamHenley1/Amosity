@@ -10,8 +10,11 @@
         <link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="lib/css/scale.css"/>
 	</head>
     <body>
-        <img class="art_logo" src="icon/art/GD_project_1.png">
-        <h1 class="notfound">Art portfolio</h1> 
+        <div class = "artybox">
+            <img class="art_logo" src="icon/art/1.png">
+            <h1 class="notfound">Art portfolio</h1> 
+        </div>
+        <div id="PDS" style="width: 100%; margin-top: 10vh;"></div>
         <nav>
             <span class = "navspan">Art</span>
             <button class="old_website" onclick="window.open('websites/Old_Amosity/index.html')">
@@ -34,4 +37,16 @@
             </a>
         </nav>
     </body>
+    <script src="https://natski.netlify.app/lib/js/ENCORE_PDS.js"></script>
+    <script>
+        PDS_settings={
+            'path':'icon/art/',
+            'fileCount':1,
+            'classes':'',
+            'colourSystem':true,
+            'animations':true,
+            'style':1
+        }
+    </script>
+
 </html>

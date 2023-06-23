@@ -212,14 +212,6 @@ nav button svg:hover{
 	opacity: 1;
 	visibility: visible;
 }
-.notfound{
-	text-align: center;
-	font-size: 55px;
-	color: white;
-	position: relative;
-	top: 32vh;
-	right: 0px;
-}
 
 #sping{
 	position: relative;
@@ -250,9 +242,22 @@ nav button svg:hover{
   }
 }
 .art_logo{
-	scale: 19%;
-	border-radius: 7em;
-	position: absolute;
-	top: -315px;
-	left: 315px;
+	width: 180px;
+	height: 180px;
+	border-radius: 10px;
+	position: relative;
+	margin: 20px auto;
+	display: block;
+
+}
+.artybox {
+	width: 100%;
+	position: relative;
+	top: 35px;
+	text-align: center;
+}
+.notfound{
+	font-size: 55px;
+	color: white;
+	position: relative;
 }
