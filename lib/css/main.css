@@ -148,7 +148,10 @@ nav a svg
 }
 nav button svg {
 	height: 30px;
-  }
+}
+nav button svg:hover{
+	animation: loading-spinner 2.5s linear infinite;
+}
 .pbox
 {
 	color: var(--text-light);
@@ -211,11 +214,11 @@ nav button svg {
 }
 .notfound{
 	text-align: center;
-	font-size: 100px;
+	font-size: 55px;
 	color: white;
 	position: relative;
-	top: 40vh;
-	right: -100px;
+	top: 32vh;
+	right: 0px;
 }
 
 #sping{
@@ -245,4 +248,11 @@ nav button svg {
   to{
     transform: rotate(360deg)
   }
+}
+.art_logo{
+	scale: 19%;
+	border-radius: 7em;
+	position: absolute;
+	top: -315px;
+	left: 315px;
 }
