@@ -236,8 +236,8 @@ nav button svg:hover{
 	border-radius: 5px;
 	transition: 0.2s;
 	fill: white;
-	top: 20vh;
-	left: -725px;
+	top: 10vh;
+	left: -735px;
 	animation: loading-spinner 2s linear infinite;
 }
 
