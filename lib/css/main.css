@@ -98,6 +98,7 @@ nav a svg
 	align-items: center;
 	border-radius: 5px;
 	transition: 0.2s;
+	fill: var(--navsvg);
 	z-index: 20;
 }
 .indexlogo::before{
@@ -246,4 +247,21 @@ nav button:hover svg{
 	font-size: 55px;
 	color: white;
 	position: relative;
+}
+#preloader{
+	top: -10px;
+	animation-fill-mode: forwards;
+	background-color: rgb(18, 18, 18);
+	height: 100%;
+	width: 100%;
+	z-index: 19;
+	position: fixed;
+}
+#preloader svg{
+	height: 150px;
+	width: 150px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);
 }
