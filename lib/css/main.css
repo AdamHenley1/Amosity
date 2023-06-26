@@ -150,19 +150,8 @@ nav a svg
 nav button svg {
 	height: 30px;
 }
-nav button svg:hover{
+nav button:hover svg{
 	animation: loading-spinner 2.5s linear infinite;
-}
-.pbox
-{
-	color: var(--text-light);
-	padding: 15px;
-	background: rgba(0, 0, 0, 0.5);
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-	z-index: 9;
-	text-align: center;
-	border-radius: 1em;
 }
 .old_website
 {
@@ -234,14 +223,7 @@ nav button svg:hover{
 	animation: loading-spinner 2s linear infinite;
 }
 
-@keyframes loading-spinner{
-  from{
-    transform: rotate(0deg)
-  }
-  to{
-    transform: rotate(360deg)
-  }
-}
+
 .art_logo{
 	width: 180px;
 	height: 180px;

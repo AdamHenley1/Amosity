@@ -10,6 +10,38 @@
         <link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="lib/css/scale.css"/>
 	</head>
     <body>
+        <style>
+            :root{
+                --SSCcolor:  rgba(0, 0, 0, 0.5) !important;
+                --SSCaccent: rgb(242, 166, 255) !important;
+            }
+            .banner-button{
+                font-size: 25px;
+                transform: translate(0px, 40px);
+                font-weight: bold;
+                color: var(--SSCaccent) !important;
+            }
+            .banner-bg div
+            {
+                position: relative;
+                color: var(--text-light);
+                padding: 15px;
+                background: var(--SSCcolor);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                z-index: 9;
+                text-align: center;
+                border-radius: 1em;
+                color: var(--SSCaccent) !important;
+            }
+            .progress-bar{
+                transition: 0.2s linear;
+                background-color:var(--SSCaccent) !important;
+            }
+            .pagebutton svg{
+                fill: var(--SSCaccent) !important;
+            }
+        </style>
         <div id="SSC" style="opacity: 0; display: none;">
             <div class="banner-bg"> <!-- duplicate 'banner-bg' for the amount of pages you want -->
         
@@ -32,14 +64,7 @@
                     <p>My tiny art portfolio</p>
                 </div>
             </div>
-            <style>
-                .banner-button{
-                    font-size: 30px;
-                    transform: translate(0px, 40px);
-                }
-            </style>
         </div>
-        
         <nav>
             <span class = "navspan">Home</span>
             <button class="old_website" onclick="window.open('websites/Old_Amosity/index.html')">

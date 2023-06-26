@@ -1,3 +1,11 @@
 @media (orientation: portrait) {
-
+    .pagebutton {
+        transform: unset !important;
+        top: unset !important;
+        bottom: 35px;
+    }
+    .banner-button{
+        font-size: 10px;
+        transform: translate(0px, 40px);
+    }
 }
