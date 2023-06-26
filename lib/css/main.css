@@ -57,6 +57,7 @@ nav
 	height: 50px;
 	padding: 5px 20px;
 	background-color: #262626;
+	z-index: 20;
 
 }
 nav button{
@@ -64,6 +65,7 @@ nav button{
 	position: relative;
 	height:50px;
 	width: 50px;
+	z-index: 20;
 }
 nav span
 {
@@ -79,6 +81,7 @@ nav span
 	opacity: 1;
 	transition: 0.2s;
 	left: 70px;
+	z-index: 20;
 }
 nav a svg
 {
