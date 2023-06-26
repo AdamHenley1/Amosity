@@ -45,6 +45,7 @@ body
 	background-image: linear-gradient(to left top,black, rgb(36, 0, 65));
 	background-repeat: no-repeat;
 	color: black;
+	background-attachment: fixed;
 	
 }
 nav
