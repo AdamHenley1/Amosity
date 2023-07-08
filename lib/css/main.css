@@ -15,26 +15,6 @@
   	--link-hover: rgb(24, 94, 82);
 	--text-light: rgb(209, 209, 209);
 }
-::-webkit-scrollbar-thumb
-{
-    background-color: var(--displaycolour);
-    border: 2px solid var(--accentcol);
-    border-radius: 100vmax;
-}
-::-webkit-scrollbar-thumb:hover
-{
-    border: 2px solid var(--displaycolour);
-}
-::-webkit-scrollbar
-{
-    width: 0px;
-	height: 0px;
-    background-color: var(--accentcol);
-}
-.itemContainer::-webkit-scrollbar,.itemContainer div p::-webkit-scrollbar
-{
-    width: 0;
-}
 body
 {
 	height: 100%;
@@ -42,11 +22,9 @@ body
 	overflow-x: hidden;
 	overflow-y: scroll;
 	padding: 20px 0 0 0;
-	background-image: linear-gradient(to left top,black, rgb(36, 0, 65));
-	background-repeat: no-repeat;
+	background-color: black;
 	color: black;
 	background-attachment: fixed;
-	
 }
 nav
 {
@@ -107,7 +85,7 @@ nav a svg
 	white-space: nowrap;
 	content: "AMOSITY";
 	text-decoration: none;
-	background-color:rgb(0, 0, 0);
+	background-color:rgb(29, 28, 28);
 	color: var(--text-light);
 	position: absolute;
 	top: 0px;
@@ -133,7 +111,7 @@ nav a svg
 	flex: 1;
 	content: '';
 	padding: 2px;
-	background-color: rgb(106, 106, 106);
+	background-color: rgb(77, 77, 77);
 	margin: -14px;
 	border-radius: 2em;
 	font-size: 38px;
@@ -155,9 +133,9 @@ nav button svg {
 	height: 30px;
 }
 nav button:hover svg{
-	animation: loading-spinner 2.5s linear infinite;
+	animation: loading-spinner 7s linear infinite;
 }
-.old_website
+.settings
 {
 	position: relative;
 	background:transparent;
@@ -177,14 +155,14 @@ nav button:hover svg{
 	border: hidden;
 
   }
-.old_website:hover{
+.settings:hover{
 	background-color: #00000080;
 }
   
-.old_website::after{
+.settings::after{
 	font-size: 12px;
 	white-space: nowrap;
-	content: "Old Website";
+	content: "Settings";
 	text-decoration: none;
 	background-color:#101010;
 	color: var(--text-light);
@@ -192,7 +170,7 @@ nav button:hover svg{
 	padding: 5px 5px 5px 5px;
 	position: absolute;
 	top: 90px;
-	left: -23px;
+	left: -10px;
 	pointer-events: none;
 	border-radius: 2px;
 	z-index: 9999;
@@ -201,7 +179,7 @@ nav button:hover svg{
 	transition: 150ms;
 	transition-timing-function: ease-out;
 }
-.old_website:hover::after{
+.settings:hover::after{
 	transform: translateY(-40px);
 	opacity: 1;
 	visibility: visible;
@@ -220,7 +198,7 @@ nav button:hover svg{
 	border-radius: 5px;
 	transition: 0.2s;
 	fill: white;
-	animation: loading-spinner 2s linear infinite;
+	animation: loading-spinner 10s linear infinite;
 }
 
 
@@ -264,7 +242,7 @@ nav button:hover svg{
 	height: 150px;
 	width: 150px;
 	position: relative;
-	top: 50%;
+	top: 40%;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -316,4 +294,42 @@ nav button:hover svg{
 	position: relative;
 	top: 35px;
 	text-align: center;
+}
+.settings_display
+{
+	position: fixed; 
+	display: block;
+	height: 100%;
+	width: 100%;
+	top: 50px;
+	z-index: 9;
+	background-image: linear-gradient(to top,black, rgb(0, 10, 40));
+	float: right;
+	right: -50%;
+	transform-origin: top;
+	transform: translateX(-50%) translateY(0);
+	border-radius: 0 0 2em 2em;
+	transition: 500ms;
+	text-decoration-color: black;
+	color: black;
+}
+.settings_display.anim
+{
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(-50%) translateY(850px);
+}
+.settings_box{
+	position: fixed; 
+	top: 150px;
+	height: fit-content;
+	z-index: 99999;
+	background-color: rgb(58, 58, 58);
+	border-radius: 0.5em 0.5em 0.5em 0.5em;
+	padding: 10px;
+	text-align: center;
+	left: 50%;
+	transform: translateX(-50%);
+	text-decoration-color: var(--);
+	color: rgb(0, 0, 0);
 }
