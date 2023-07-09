@@ -309,7 +309,7 @@ nav button:hover svg{
 	transform-origin: top;
 	transform: translateX(-50%) translateY(6500px);
 	border-radius: 0 0 2em 2em;
-	transition: 1500ms;
+	transition: 550ms;
 	text-decoration-color: black;
 	color: black;
 	opacity: 0;
@@ -317,8 +317,8 @@ nav button:hover svg{
 .settings_display.anim
 {
 	opacity: 1;
-	transition: 550ms;
-	transition-timing-function: ease-in-out;
+	transition: 400ms;
+	transition-timing-function: ease-out;
 	transform: translateX(-50%) translateY(0);
 }
 .settings_box{
