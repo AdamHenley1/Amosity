@@ -307,17 +307,19 @@ nav button:hover svg{
 	float: right;
 	right: -50%;
 	transform-origin: top;
-	transform: translateX(-50%) translateY(0);
+	transform: translateX(-50%) translateY(6500px);
 	border-radius: 0 0 2em 2em;
-	transition: 500ms;
+	transition: 1500ms;
 	text-decoration-color: black;
 	color: black;
+	opacity: 0;
 }
 .settings_display.anim
 {
-	visibility: hidden;
-	opacity: 0;
-	transform: translateX(-50%) translateY(850px);
+	opacity: 1;
+	transition: 550ms;
+	transition-timing-function: ease-in-out;
+	transform: translateX(-50%) translateY(0);
 }
 .settings_box{
 	position: fixed; 
