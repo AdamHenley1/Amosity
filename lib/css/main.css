@@ -136,9 +136,6 @@ nav a svg
 nav button svg {
 	height: 30px;
 }
-nav button:hover svg{
-	animation: loading-spinner 7s linear infinite;
-}
 .settings
 {
 	position: relative;
@@ -159,6 +156,9 @@ nav button:hover svg{
 	border: hidden;
 
   }
+.settings:hover svg{
+	animation: loading-spinner 7s linear infinite;
+}
 .settings:hover{
 	background-color: #00000080;
 }
@@ -336,6 +336,80 @@ nav button:hover svg{
 	text-align: center;
 	left: 50%;
 	transform: translateX(-50%);
-	text-decoration-color: var(--);
 	color: rgb(0, 0, 0);
+}
+.menu_display
+{
+	position: fixed; 
+	display: block;
+	height: 100%;
+	width: 50%;
+	top: 50px;
+	z-index: 9;
+	background-image: linear-gradient(to top,black, rgb(0, 10, 40));
+	right: -10%;
+	transform-origin: top;
+	border-radius: 0 0 2em 2em;
+	transition: 550ms;
+	transform: translateX(50%) translateY(0);
+	text-decoration-color: black;
+	color: black;
+	opacity: 0;
+}
+.menu_display.anims
+{
+	opacity: 1;
+	transition: 400ms;
+	transition-timing-function: ease-out;
+	transform: translateX(-30%) translateY(0);
+}
+.menu
+{
+	position: relative;
+	background:transparent;
+	border-color: transparent;
+	height: 38px;
+	width: 38px;
+	padding: 5px;
+	float: right;
+	left: 40px;
+	top: 1px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	transition: 0.2s;
+	fill: var(--navsvg);
+	border: hidden;
+	visibility: hidden;
+
+  }
+.menu:hover{
+	background-color: #00000080;
+}
+  
+.menu::after{
+	font-size: 12px;
+	white-space: nowrap;
+	content: "menu";
+	text-decoration: none;
+	background-color:#101010;
+	color: var(--text-light);
+	font-weight: bold;
+	padding: 5px 5px 5px 5px;
+	position: absolute;
+	top: 90px;
+	left: -10px;
+	pointer-events: none;
+	border-radius: 2px;
+	z-index: 9999;
+	opacity: 0;
+	visibility: hidden;
+	transition: 150ms;
+	transition-timing-function: ease-out;
+}
+.menu:hover::after{
+	transform: translateY(-40px);
+	opacity: 1;
+	visibility: visible;
 }
