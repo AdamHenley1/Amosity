@@ -234,7 +234,7 @@ nav button:hover svg{
 	text-align: center;
 }
 #preloader{
-	top: -10px;
+	top: 0px;
 	animation-fill-mode: forwards;
 	background-color: rgb(18, 18, 18);
 	height: 100%;
