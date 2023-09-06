@@ -346,11 +346,11 @@ nav button svg {
 	width: 50%;
 	top: 50px;
 	background-color: black;
-	right: -10%;
+	right: 0;
 	transform-origin: top;
 	border-radius: 0 0 2em 2em;
 	transition: 550ms;
-	transform: translateX(50%) translateY(0);
+	transform: translateX(100%) translateY(0);
 	text-decoration-color: black;
 	color: black;
 	opacity: 0;
@@ -362,7 +362,7 @@ nav button svg {
 {
 	opacity: 1;
 	pointer-events: unset;
-	transform: translateX(-20%) translateY(0);
+	transform: translateX(0) translateY(0);
 }
 .menu
 {
