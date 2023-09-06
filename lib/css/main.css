@@ -354,14 +354,14 @@ nav button svg {
 	text-decoration-color: black;
 	color: black;
 	opacity: 0;
-	visibility: hidden;
+	pointer-events: none;
 	z-index: 10000;
 	transition: 400ms ease-out;
 }
 .menu_display.anims
 {
 	opacity: 1;
-	visibility: visible;
+	pointer-events: unset;
 	transform: translateX(-20%) translateY(0);
 }
 .menu
