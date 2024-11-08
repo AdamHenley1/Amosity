@@ -92,7 +92,7 @@ nav a svg
 	font-size: 15px;
 	font-weight: bold;
 	white-space: nowrap;
-	content: "AMOSITY";
+	content: "AMOSITTY";
 	text-decoration: none;
 	background-color:#1b1b1b;
 	color: var(--text-light);
@@ -352,7 +352,7 @@ nav button svg {
 	transform-origin: top;
 	border-radius: 0 0 2em 2em;
 	transition: 550ms;
-	transform: translateX(100%) translateY(0);
+	transform: translateX(100%) translateY();
 	text-decoration-color: black;
 	color: black;
 	opacity: 0;
@@ -412,6 +412,40 @@ nav button svg {
 	transition-timing-function: ease-out;
 }
 .menu:hover::after{
+	transform: translateY(-40px);
+	opacity: 1;
+	visibility: visible;
+}
+.Temp{
+	position: relative;
+	height: 38px;
+	width: 20px;
+	padding: 0px;
+	float: right;
+	left: 0px;
+	top: 0px;
+}
+.Temp::after{
+	font-size: 12px;
+	white-space: nowrap;
+	content: "About Me";
+	text-decoration: none;
+	background-color:#101010;
+	color: var(--text-light);
+	font-weight: bold;
+	padding: 5px 5px 5px 5px;
+	position: absolute;
+	top: 90px;
+	left: -10px;
+	pointer-events: none;
+	border-radius: 2px;
+	z-index: 9999;
+	opacity: 0;
+	visibility: hidden;
+	transition: 150ms;
+	transition-timing-function: ease-out;
+}
+.Temp:hover::after{
 	transform: translateY(-40px);
 	opacity: 1;
 	visibility: visible;
