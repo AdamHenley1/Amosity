@@ -45,26 +45,21 @@
         </style>
         <!-- Slideshow  -->
         <div class="SSC" style="opacity: 0; display: none;">
-            <div class="banner-bg"> <!-- duplicate 'banner-bg' for the amount of pages you want -->
-        
-                <img src="icon/slide_image/bt.png" draggable="false" alt="" loading="eager">
-        
-                <a class="banner-button" href="Codingpg.html">enter</a>
-        
-                <div class="pbox">
-                    <h1>Coding</h1>
-                    <p>My portfolio of coding in various languages</p>
-                </div>
+
+            <div class="banner-bg"> <!-- duplicate the 'banner-bg' element to have multiple pages -->
+
+                <img src="icon/slide_image/bt.png" alt="Coding portfolio"> <!-- background images are optional but are pre-styled for the user -->
+
+                <a class="banner-button" href="Codingpg.html">Coding portfolio</a> <!-- buttons are optional but are pre-styled for the user -->
+
+
             </div>
             <div class="banner-bg"> <!-- duplicate 'banner-bg' for the amount of pages you want -->
         
-                <img src="icon/slide_image/bt.png" draggable="false" alt="" loading="eager">
+                <img src="icon/slide_image/bt.png" draggable="false" alt="Art portfolio" loading="eager">
         
-                <a class="banner-button" href="Artpg.html">enter</a>
-                <div class="pbox">
-                    <h1>Art</h1>
-                    <p>My art portfolio</p>
-                </div>
+                <a class="banner-button" href="Artpg.html">Art portfolio</a>
+                
             </div> <!-- duplicate 'banner-bg' for the amount of pages you want -->
         </div>
 
@@ -110,13 +105,15 @@
     <script src="https://natski.netlify.app/lib/js/ENCORE_SSC.js"></script>
     <script>
         SSC_settings={
-            'thumbs':false,
+            'thumbs':true,
             'progressBar':true,
             'sideButtons':true,
-            'timer':15000,
-            'style':1
+            'pauseButton':true,
+            'timer':10000,
+            'style':'STANDARD'
         }
     </script>
+
     <script>
         var screen  = document.getElementById("preloader");
         window.addEventListener("load", function(){
