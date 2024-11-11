@@ -461,7 +461,7 @@ nav button svg {
 	padding: 1em;
 	width: 50%;
 	height: 75%;
-	background-color: #22222290;
+	background-color: #000000e5;
 	border-radius: 20px;
 }
 .PFP{
@@ -469,9 +469,9 @@ nav button svg {
 	display: block;
 	margin-left: auto;
   	margin-right: auto;
-	width: 150px;
-	height:150px;
-	border-radius: 5em;
+	width: 125px;
+	height:125px;
+	border-radius: 4em;
 }
 .AboutMebox span{
 	display: table;
@@ -480,14 +480,14 @@ nav button svg {
 }
 .AboutMebox a{
 	position: relative;
-	display: block;
-	margin-left: auto;
-  	margin-right: auto;
+	display: table;
+    margin: 0 auto;
 	font-weight: bold;
 	font-size: 0.7rem;
 }
 .AboutMebox a:link {
 	color: rgb(255, 255, 255);
+	
 	background-color: transparent;
 	text-decoration: none;
   }
