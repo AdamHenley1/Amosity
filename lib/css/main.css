@@ -445,7 +445,7 @@ nav button svg {
 	transition: 150ms;
 	transition-timing-function: ease-out;
 }
-.Temp:hover::after{
+.AboutMebutton:hover::after{
 	transform: translateY(-40px);
 	opacity: 1;
 	visibility: visible;
@@ -455,6 +455,7 @@ nav button svg {
 	position: relative;
 	margin-left: auto;
   	margin-right: auto;
+	height: fit-content;
 	top: 10%;
 	color: #e9e9e9;
 	padding: 1em;
