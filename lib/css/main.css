@@ -416,7 +416,7 @@ nav button svg {
 	opacity: 1;
 	visibility: visible;
 }
-.Temp{
+.AboutMebutton{
 	position: relative;
 	height: 38px;
 	width: 20px;
@@ -425,7 +425,7 @@ nav button svg {
 	left: 0px;
 	top: 0px;
 }
-.Temp::after{
+.AboutMebutton::after{
 	font-size: 12px;
 	white-space: nowrap;
 	content: "About Me";
