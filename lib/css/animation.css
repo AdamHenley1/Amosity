@@ -15,5 +15,14 @@
       opacity: 0;
     }
   }
+  @keyframes col {
+    from{
+      fill: #2b2b2b;
+    }
+    to{
+      fill: #803bff;
+    }
+
+  }
 
   
