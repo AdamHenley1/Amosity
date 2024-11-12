@@ -23,19 +23,19 @@
     }
     .box1{
         min-width: fit-content;
-        min-height: fit-content;
+        min-height: 100px;
         border-radius: 5%;
-        padding: 2%;
+        padding: 3%;
     }
     .box1 img{
-        width: 15%;
-        height:15%;
+        width: 20%;
+        height:20%;
     }
     .box1 span{
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
     .box1 p{
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
     
     
